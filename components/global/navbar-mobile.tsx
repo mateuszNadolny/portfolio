@@ -16,10 +16,10 @@ const NavbarMobile = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="lg:hidden">
+    <div className="lg:hidden ">
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <Menu className="fixed mt-4 ml-4" />
+          <Menu className="fixed mt-4 ml-4 z-10" />
         </SheetTrigger>
         <SheetContent side="left">
           <nav className="justify-center  mt-10">
