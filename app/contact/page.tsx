@@ -1,7 +1,12 @@
-import React from 'react';
+import ContactIconSection from '@/components/contact/contact-icon-section';
 
 const ContactPage = () => {
-  return <div>ContactPage</div>;
+  return (
+    <div className="h-full flex flex-col items-center justify-center relative">
+      <p className="text-xs absolute lg:hidden top-12">{'<contact />'}</p>
+      <ContactIconSection />
+    </div>
+  );
 };
 
 export default ContactPage;
