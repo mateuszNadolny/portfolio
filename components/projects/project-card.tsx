@@ -8,12 +8,13 @@ import Link from 'next/link';
 interface ProjectCardProps {
   title: string;
   description: string;
+  techs: string;
   image: string;
   github: string;
   live: string;
 }
 
-const ProjectCard = ({ title, description, image, github, live }: ProjectCardProps) => {
+const ProjectCard = ({ title, description, techs, image, github, live }: ProjectCardProps) => {
   return (
     <CardContainer className="inter-var">
       <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1]  w-auto lg:w-[30rem] h-auto rounded-xl p-6 border">
@@ -35,7 +36,10 @@ const ProjectCard = ({ title, description, image, github, live }: ProjectCardPro
             alt="thumbnail"
           />
         </CardItem>
-        <div className="flex gap-3 items-center mt-20">
+        <CardItem translateZ="130" className="mt-2 text-xs font-light text-muted-foreground">
+          {techs}
+        </CardItem>
+        <div className="flex gap-3 items-center mt-10">
           <CardItem
             translateZ={20}
             as={Link}

@@ -31,6 +31,7 @@ const ProjectSection = () => {
               key={item.id}
               title={item.title}
               description={item.description}
+              techs={item.techs}
               image={item.image}
               github={item.github}
               live={item.live}
@@ -47,6 +48,7 @@ const ProjectSection = () => {
                   key={item.id}
                   title={item.title}
                   description={item.description}
+                  techs={item.techs}
                   image={item.image}
                   github={item.github}
                   live={item.live}
