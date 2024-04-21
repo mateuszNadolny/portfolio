@@ -11,8 +11,8 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="hidden lg:flex justify-center h-[2%] w-full mt-10">
-      <ul className="flex gap-12 list-none">
+    <nav className="fixed z-10 top-10 hidden lg:flex justify-center w-full">
+      <ul className="flex gap-12 list-none pt-10">
         {NAV_ELEMENTS.map((item) => (
           <li
             key={item.id}

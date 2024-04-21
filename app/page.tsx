@@ -33,9 +33,12 @@ export default function Home() {
   const textGenerateWords = `I am a full-stack web-developer based in Warsaw, Poland`;
 
   return (
-    <div className="flex flex-col items-center justify-center h-[40rem] ">
-      <TypewriterEffectSmooth words={typewriterWords} />
-      <TextGenerateEffect words={textGenerateWords} />
-    </div>
+    <main className="h-full">
+      <div className="h-full flex flex-col items-center justify-center relative">
+        <p className="text-xs absolute lg:hidden top-12">{'<about me />'}</p>
+        <TypewriterEffectSmooth words={typewriterWords} />
+        <TextGenerateEffect words={textGenerateWords} />
+      </div>
+    </main>
   );
 }
