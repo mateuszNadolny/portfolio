@@ -5,8 +5,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { Menu } from 'lucide-react';
 
-import { Sheet, SheetClose, SheetContent, SheetFooter, SheetTrigger } from '@/components/ui/sheet';
-import { Button } from '@/components/ui/button';
+import { Sheet, SheetContent, SheetFooter, SheetTrigger } from '@/components/ui/sheet';
 
 import { cn } from '@/lib/utils';
 
