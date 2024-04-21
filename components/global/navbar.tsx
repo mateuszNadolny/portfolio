@@ -24,7 +24,13 @@ const Navbar = () => {
           </li>
         ))}
         <li className="text-[10px] p-3 md:text-sm cursor-pointer flex items-center justify-center rounded-md transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50'">
-          {'<resume />'}
+          <Link
+            href={
+              'https://drive.google.com/file/d/1lZwKt9yD4yIozK2RBa1Fh7ZBZV763uXA/view?usp=sharing'
+            }
+            target="blank">
+            {'<resume />'}
+          </Link>
         </li>
       </ul>
     </nav>
