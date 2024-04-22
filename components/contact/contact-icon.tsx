@@ -2,6 +2,8 @@
 import React from 'react';
 import { HoverBorderGradient } from '../ui/hover-border-gradient';
 import { Github, Linkedin } from 'lucide-react';
+import { Button } from '../ui/button';
+import Link from 'next/link';
 
 interface ContactIconProps {
   title: string;
@@ -10,15 +12,14 @@ interface ContactIconProps {
 
 export function ContactIcon({ title, url }: ContactIconProps) {
   return (
-    <div className="flex justify-center text-center">
-      <a href={url}>
-        <HoverBorderGradient
-          containerClassName="rounded-full"
-          as="button"
-          className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2">
-          {title === 'LinkedIn' ? <Linkedin /> : <Github />}
-        </HoverBorderGradient>
-      </a>
-    </div>
+    <Button className="w-full bg-accent hover:bg-muted-foreground">
+      <Link href={url}>
+        {title === 'LinkedIn' ? (
+          <Linkedin className="text-primary" />
+        ) : (
+          <Github className="text-primary" />
+        )}
+      </Link>
+    </Button>
   );
 }
