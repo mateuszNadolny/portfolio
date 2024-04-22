@@ -1,4 +1,14 @@
-export const PROJECT_DATA = [
+type Project = {
+  id: string;
+  title: string;
+  description: string;
+  techs: string;
+  image: string;
+  github: string;
+  live: string;
+};
+
+export const PROJECT_DATA: Project[] = [
   {
     id: 'selfspace',
     title: 'Selfspace',

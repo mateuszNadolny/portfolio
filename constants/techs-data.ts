@@ -1,4 +1,13 @@
-export const TECH_ELEMENTS = [
+type Tech = {
+  id: string;
+  group: string;
+  title: string;
+  tooltip?: string;
+  url: string;
+  image: string;
+};
+
+export const TECH_ELEMENTS: Tech[] = [
   {
     id: 'nextjs',
     group: 'lang',
@@ -150,6 +159,13 @@ export const TECH_ELEMENTS = [
     title: 'Figma',
     url: 'https://www.figma.com/',
     image: '/figma.png'
+  },
+  {
+    id: 'jira',
+    group: 'tools',
+    title: 'Jira',
+    url: 'https://www.atlassian.com/software/jira',
+    image: '/jira.png'
   },
   {
     id: 'aem',

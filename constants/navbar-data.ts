@@ -1,4 +1,10 @@
-export const NAV_ELEMENTS = [
+type NavbarElement = {
+  id: string;
+  text: string;
+  url: string;
+};
+
+export const NAV_ELEMENTS: NavbarElement[] = [
   {
     id: 'aboutme',
     text: '<about me />',
