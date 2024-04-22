@@ -22,7 +22,10 @@ const NavbarMobile = () => {
           <Menu className="fixed mt-4 ml-4 z-10" />
         </SheetTrigger>
         <SheetContent side="left">
-          <nav className="justify-center  mt-10">
+          <nav className="justify-center mt-10">
+            <h2 className="text-lg text-center mb-8 font-extrabold transition-colors">
+              {'<nadolny.dev />'}
+            </h2>
             <ul className="flex flex-col h-full justify-around w-full list-none">
               {NAV_ELEMENTS.map((item) => (
                 <li

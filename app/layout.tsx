@@ -10,7 +10,7 @@ import { ModeToggle } from '@/components/global/theme-toggle';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Nadolny Dev',
+  title: 'nadolny.dev',
   description: 'Portfolio page of Mateusz Nadolny'
 };
 
