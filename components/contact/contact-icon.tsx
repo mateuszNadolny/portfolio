@@ -11,15 +11,18 @@ interface ContactIconProps {
 }
 
 export function ContactIcon({ title, url }: ContactIconProps) {
+  let content = <></>;
+  if (title === 'LinkedIn') {
+    content = <Linkedin className="text-primary" />;
+  } else if (title === 'Github') {
+    content = <Github className="text-primary" />;
+  } else {
+    content = <span className="text-primary text-xs">{title}</span>;
+  }
+
   return (
     <Button className="w-full bg-accent hover:bg-muted-foreground">
-      <Link href={url}>
-        {title === 'LinkedIn' ? (
-          <Linkedin className="text-primary" />
-        ) : (
-          <Github className="text-primary" />
-        )}
-      </Link>
+      <Link href={url}>{content}</Link>
     </Button>
   );
 }

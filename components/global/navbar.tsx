@@ -12,9 +12,9 @@ const Navbar = () => {
 
   return (
     <div className="w-full hidden lg:flex flex flex-col items-center justify-center fixed z-10 top-10">
-      <h2 className="text-3xl font-extrabold transition-colors">{'<nadolny.dev />'}</h2>
+      <h2 className="text-3xl font-extrabold transition-colors select-none">{'<nadolny.dev />'}</h2>
       <nav className="flex justify-center ">
-        <ul className="flex gap-12 list-none pt-10">
+        <ul className="flex gap-12 list-none pt-6">
           {NAV_ELEMENTS.map((item) => (
             <li
               key={item.id}

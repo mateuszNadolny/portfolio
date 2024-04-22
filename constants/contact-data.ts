@@ -6,5 +6,10 @@ type Contact = {
 
 export const CONTACT_DATA: Contact[] = [
   { id: 'github', title: 'Github', url: 'https://github.com/mateuszNadolny' },
-  { id: 'linkedin', title: 'LinkedIn', url: 'https://www.linkedin.com/in/mateusz-nadolny-web-dev/' }
+  {
+    id: 'linkedin',
+    title: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/mateusz-nadolny-web-dev/'
+  },
+  { id: 'mail', title: 'nadolny.dev@gmail.com', url: 'mailto:nadolny.dev@gmail.com' }
 ];
