@@ -17,7 +17,7 @@ interface ProjectCardProps {
 const ProjectCard = ({ title, description, techs, image, github, live }: ProjectCardProps) => {
   return (
     <CardContainer className="inter-var">
-      <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1]  w-auto lg:w-[30rem] h-auto rounded-xl p-6 border">
+      <CardBody className="relative bg-hovercard group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1]  w-auto lg:w-[30rem] h-auto rounded-xl p-6 border">
         <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
           {title}
         </CardItem>
@@ -45,7 +45,7 @@ const ProjectCard = ({ title, description, techs, image, github, live }: Project
             as={Link}
             href={github}
             target="__blank"
-            className="px-4 py-2 rounded-xl text-xs font-normal bg-secondary">
+            className="px-4 py-2 rounded-xl text-xs font-normal bg-primary text-secondary">
             Source code
           </CardItem>
           <CardItem
@@ -53,7 +53,7 @@ const ProjectCard = ({ title, description, techs, image, github, live }: Project
             as={Link}
             href={live}
             target="__blank"
-            className="px-4 py-2 rounded-xl text-xs font-normal bg-secondary">
+            className="px-4 py-2 rounded-xl text-xs font-normal bg-primary text-secondary">
             Live page
           </CardItem>
         </div>

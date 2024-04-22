@@ -20,11 +20,7 @@ export const NAV_ELEMENTS: NavbarElement[] = [
     text: '<projects />',
     url: '/projects'
   },
-  {
-    id: 'workexperience',
-    text: '<work experience />',
-    url: '/experience'
-  },
+
   {
     id: 'contact',
     text: '<contact />',
