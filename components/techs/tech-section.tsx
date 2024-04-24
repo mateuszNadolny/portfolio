@@ -7,8 +7,8 @@ import { TECH_ELEMENTS } from '@/constants/techs-data';
 
 const TechSection = () => {
   return (
-    <div>
-      <div className="grid grid-cols-3 lg:grid-cols-9 grid-flow-row gap-5 lg:gap-7">
+    <div className="pt-[80px] lg:pt-0 overflow-scroll lg:overflow-hidden no-scrollbar h-200px lg:h-auto">
+      <div className="grid grid-cols-3 lg:grid-cols-9 grid-flow-row gap-5 lg:gap-7 ">
         {Object.values(TECH_ELEMENTS).map((item, i) => (
           <motion.div
             key={item.id}

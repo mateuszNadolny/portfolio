@@ -13,8 +13,8 @@ import {
 
 const ProjectSection = () => {
   return (
-    <>
-      <div className="hidden lg:flex gap-3 lg:gap-12 overflow-x-scroll no-scrollbar">
+    <div className="pt-[10px] lg:pt-0 no-scrollbar overflow-scroll lg:overflow-hidden ">
+      <div className="hidden lg:flex gap-3 lg:gap-12 overflow-x-scroll lg:overflow-hidden no-scrollbar">
         {PROJECT_DATA.map((item, i) => (
           <motion.div
             key={item.id}
@@ -60,7 +60,7 @@ const ProjectSection = () => {
           <CarouselNext />
         </Carousel>
       </div>
-    </>
+    </div>
   );
 };
 

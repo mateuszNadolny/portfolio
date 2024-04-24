@@ -10,7 +10,7 @@ import { ModeToggle } from '@/components/global/theme-toggle';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'nadolny.dev',
+  title: 'Mateusz Nadolny | Fullstack Web Developer',
   description: 'Portfolio page of Mateusz Nadolny'
 };
 
@@ -21,16 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} max-w-screen h-svh max-h-screen`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange>
+      <body className={`${inter.className} max-w-screen max-h-screen no-scrollbar`}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <Navbar />
           <NavbarMobile />
           {children}
-          <ModeToggle />
+          <ModeToggle className={'hidden lg:flex fixed bottom-10 w-full justify-center'} />
         </ThemeProvider>
       </body>
     </html>

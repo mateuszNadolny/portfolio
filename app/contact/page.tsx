@@ -16,14 +16,16 @@ const ContactPage = () => {
     }
   };
   return (
-    <div className="h-full flex flex-col items-center pt-28 lg:pt-0 lg:mt-[200px] gap-3 relative w-full">
-      <p className="text-xs absolute lg:hidden top-12">{'<contact />'}</p>
+    <div className="flex flex-col items-center pt-16 lg:pt-0 lg:mt-[200px] gap-3 lg:pb-0 lg:overflow-clip">
+      <div className="fixed lg:hidden top-0 h-[50px] w-full flex items-center justify-center bg-background">
+        <p className="text-xs">{'<contact />'}</p>
+      </div>
       <motion.div
         className="w-full flex flex-col items-center gap-4"
         initial="hidden"
         animate="visible"
         transition={{
-          staggerChildren: 0.2 // This will stagger the animation of each child
+          staggerChildren: 0.2
         }}>
         <motion.div variants={variants} className="w-full flex justify-center">
           <ContactForm />
