@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 
 import { ThemeProvider } from '@/components/providers/theme-provider';
+import { Toaster } from '@/components/ui/toaster';
 import Navbar from '@/components/global/navbar';
 import NavbarMobile from '@/components/global/navbar-mobile';
 import { ModeToggle } from '@/components/global/theme-toggle';
@@ -26,6 +27,7 @@ export default function RootLayout({
           <Navbar />
           <NavbarMobile />
           {children}
+          <Toaster />
           <ModeToggle className={'hidden lg:flex fixed bottom-10 w-full justify-center'} />
         </ThemeProvider>
       </body>

@@ -1,8 +1,10 @@
 'use client';
+import { useState } from 'react';
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
+import axios from 'axios';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -13,8 +15,12 @@ import {
   FormLabel,
   FormMessage
 } from '@/components/ui/form';
+import { useToast } from '@/components/ui/use-toast';
+
 import { ContactInput } from './contact-input';
 import { ContactTextarea } from './contact-textarea';
+import { LoaderCircle } from 'lucide-react';
+
 const formSchema = z.object({
   name: z.string().trim().min(2, {
     message: 'Name must be at least 2 characters.'
@@ -33,6 +39,8 @@ const formSchema = z.object({
 });
 
 export function ContactForm() {
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -42,13 +50,33 @@ export function ContactForm() {
     }
   });
 
-  // 2. Define a submit handler.
   function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
+    setIsLoading(false);
+    const { name, email, message } = values;
+    axios
+      .post('/api/send', {
+        name,
+        email,
+        message
+      })
+      .catch((error) => {
+        toast({
+          variant: 'destructive',
+          title: 'Something went wrong',
+          description: error.response.data
+        });
+      })
+      .finally(() => {
+        setIsLoading(false);
+        toast({
+          title: 'Email has been sent ✅',
+          description: "I'll get back to you as soon as possible."
+        });
+        form.reset();
+      });
+
     console.log(values);
   }
-  // ...
 
   return (
     <Form {...form}>
@@ -63,6 +91,7 @@ export function ContactForm() {
         <FormField
           control={form.control}
           name="name"
+          disabled={isLoading}
           render={({ field }) => (
             <FormItem>
               <FormLabel>Your name</FormLabel>
@@ -74,10 +103,10 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-
         <FormField
           control={form.control}
           name="email"
+          disabled={isLoading}
           render={({ field }) => (
             <FormItem>
               <FormLabel>Your e-mail adress</FormLabel>
@@ -92,6 +121,7 @@ export function ContactForm() {
         <FormField
           control={form.control}
           name="message"
+          disabled={isLoading}
           render={({ field }) => (
             <FormItem>
               <FormLabel>Your message</FormLabel>
@@ -103,8 +133,8 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full">
-          Send
+        <Button type="submit" className="w-full" disabled={isLoading}>
+          {!isLoading ? 'Send' : <LoaderCircle className="animate-spin" />}
         </Button>
       </form>
     </Form>

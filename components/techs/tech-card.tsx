@@ -18,7 +18,6 @@ const TechCard = ({ title, url, image, tooltip }: TechCardProps) => {
             <div className="h-[58px] w-[58px] p-5 lg:h-[100px] lg:w-[100px] rounded-md hover:scale-105 flex flex-col gap-2 items-center justify-center bg-secondary">
               <Image src={image} alt={title} width={50} height={50} className="hidden lg:flex" />
               <Image src={image} alt={title} width={20} height={20} className="flex lg:hidden" />
-
               <p className="text-[9px] lg:text-xs text-center text-muted-foreground">{title}</p>
             </div>
           </a>
