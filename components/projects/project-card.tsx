@@ -29,6 +29,7 @@ const ProjectCard = ({ title, description, techs, image, github, live }: Project
         </CardItem>
         <CardItem translateZ="100" className="w-full mt-4">
           <Image
+            priority
             src={image}
             height="1000"
             width="1000"
