@@ -22,7 +22,9 @@ export function ContactIcon({ title, url }: ContactIconProps) {
 
   return (
     <Button className="w-full bg-accent hover:bg-muted-foreground">
-      <Link href={url}>{content}</Link>
+      <Link href={url} target="_blank">
+        {content}
+      </Link>
     </Button>
   );
 }

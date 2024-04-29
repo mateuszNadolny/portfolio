@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
@@ -14,7 +15,7 @@ const TechCard = ({ title, url, image, tooltip }: TechCardProps) => {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <a href={url}>
+          <Link href={url} target="_blank">
             <div className="h-[58px] w-[58px] p-5 lg:h-[100px] lg:w-[100px] rounded-md hover:scale-105 flex flex-col gap-2 items-center justify-center bg-secondary">
               <Image
                 priority
@@ -34,7 +35,7 @@ const TechCard = ({ title, url, image, tooltip }: TechCardProps) => {
               />
               <p className="text-[9px] lg:text-xs text-center text-muted-foreground">{title}</p>
             </div>
-          </a>
+          </Link>
         </TooltipTrigger>
         <TooltipContent>
           <p>{tooltip ? tooltip : title}</p>
