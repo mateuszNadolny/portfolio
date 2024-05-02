@@ -31,7 +31,7 @@ export default function Home() {
   ];
 
   const textGenerateWords = `I am a full-stack web-developer based in Warsaw, Poland`;
-  const description = `Self-taught web developer with over two years of commercial experience in crafting websites and online shops using CMS tools. A fullstack enthusiast, who for the past three years been working on web projects leveraging technologies such as TypeScript, React.js, Next.js, TailwindCSS, MongoDB, and many others.`;
+  const description = `Self-taught web developer with over two years of commercial experience in crafting websites and online shops using CMS tools. A fullstack enthusiast, who for the past three years has been working on web projects leveraging technologies such as TypeScript, React.js, Next.js, TailwindCSS, MongoDB, and many others.`;
 
   const variants = {
     hidden: { opacity: 0, translateY: -50 },
@@ -63,7 +63,7 @@ export default function Home() {
             </h2>
           </motion.div>
           <motion.div variants={variants} className="w-1/2 text-gray-400 flex justify-center">
-            <h3 className="text-lg text-center px-3 font-bold">{description}</h3>
+            <h3 className="text-md text-center px-3 font-bold">{description}</h3>
           </motion.div>
         </motion.div>
         <motion.div
