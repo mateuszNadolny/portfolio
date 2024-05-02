@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 
 import { ThemeProvider } from '@/components/providers/theme-provider';
+import PlausibleProvider from 'next-plausible';
 import { Toaster } from '@/components/ui/toaster';
 import Navbar from '@/components/global/navbar';
 import NavbarMobile from '@/components/global/navbar-mobile';
@@ -22,6 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <PlausibleProvider domain="mnadolny.com" />
+      </head>
       <body className={`${inter.className} max-w-screen max-h-screen no-scrollbar`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <Navbar />
