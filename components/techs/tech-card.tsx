@@ -16,7 +16,7 @@ const TechCard = ({ title, url, image, tooltip }: TechCardProps) => {
       <Tooltip>
         <TooltipTrigger asChild>
           <Link href={url} target="_blank">
-            <div className="h-[58px] w-[58px] p-5 lg:h-[100px] lg:w-[100px] rounded-md hover:scale-105 flex flex-col gap-2 items-center justify-center bg-secondary">
+            <div className="h-[90px] w-[140px] p-5 lg:h-[100px] lg:w-[100px] rounded-md hover:scale-105 flex flex-col gap-2 items-center justify-center bg-secondary">
               <Image
                 priority
                 src={image}
@@ -29,11 +29,11 @@ const TechCard = ({ title, url, image, tooltip }: TechCardProps) => {
                 priority
                 src={image}
                 alt={title}
-                width={20}
-                height={20}
+                width={40}
+                height={40}
                 className="flex lg:hidden"
               />
-              <p className="text-[9px] lg:text-xs text-center text-muted-foreground">{title}</p>
+              <p className="text-[12px] lg:text-xs text-center text-muted-foreground">{title}</p>
             </div>
           </Link>
         </TooltipTrigger>

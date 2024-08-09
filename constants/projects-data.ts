@@ -12,8 +12,7 @@ export const PROJECT_DATA: Project[] = [
   {
     id: 'selfspace',
     title: 'Selfspace',
-    description:
-      'A place where you can meditate, breathe, focus and relax. Built with Next.js and Supabase',
+    description: 'A place where you can meditate, breathe, focus and relax.',
     techs:
       'Next.js 13 / React.js / Typescript / Tailwind CSS / Framer-Motion / NextUI / shadcn / ClerkAuth / zod / Supabase / Prisma / Jest / react-testing-library',
     image: '/selfspace.png',
