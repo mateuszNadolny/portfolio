@@ -9,7 +9,7 @@ export default function Home() {
       text: 'Hello'
     },
     {
-      text: 'there!'
+      text: 'there! ✋'
     },
     {
       text: 'My'

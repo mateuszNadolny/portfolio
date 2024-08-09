@@ -1,8 +1,14 @@
 'use client';
+import type { Metadata } from 'next';
 import { motion } from 'framer-motion';
 
 import { ContactForm } from '@/components/contact/contact-form';
 import ContactIconSection from '@/components/contact/contact-icon-section';
+
+export const metadata: Metadata = {
+  title: 'Contact | Mateusz Nadolny | Fullstack Web Developer',
+  description: 'Portfolio page of Mateusz Nadolny'
+};
 
 const ContactPage = () => {
   const variants = {

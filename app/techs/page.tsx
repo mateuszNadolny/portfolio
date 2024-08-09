@@ -1,4 +1,11 @@
+import type { Metadata } from 'next';
+
 import TechSection from '@/components/techs/tech-section';
+
+export const metadata: Metadata = {
+  title: 'Technologies | Mateusz Nadolny | Fullstack Web Developer',
+  description: 'Portfolio page of Mateusz Nadolny'
+};
 const TechPage = () => {
   return (
     <div className="h-screen flex flex-col items-center justify-center pb-10 no-srollbar">

@@ -1,4 +1,10 @@
+import type { Metadata } from 'next';
 import ProjectSection from '@/components/projects/projects-section';
+
+export const metadata: Metadata = {
+  title: 'Projects | Mateusz Nadolny | Fullstack Web Developer',
+  description: 'Portfolio page of Mateusz Nadolny'
+};
 const Projects = () => {
   return (
     <div className="h-screen flex flex-col items-center justify-center">
