@@ -31,7 +31,7 @@ export default function Home() {
   ];
 
   const textGenerateWords = `I am a full-stack web-developer based in Warsaw, Poland`;
-  const description = `Self-taught web developer with over two and a half years of commercial experience in crafting websites and online shops using CMS tools. A fullstack enthusiast, who for the past three years has been working on web projects leveraging technologies such as TypeScript, React.js, Next.js, TailwindCSS, MongoDB, and many others.`;
+  const description = `Self-taught web developer with over three years of commercial experience in crafting websites and online stores using CMS tools. A fullstack enthusiast, who for the past three years has been working on web projects leveraging technologies such as TypeScript, React.js, Next.js, TailwindCSS, MongoDB, and many others.`;
 
   const variants = {
     hidden: { opacity: 0, translateY: -50 },
