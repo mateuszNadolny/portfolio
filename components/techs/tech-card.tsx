@@ -1,7 +1,17 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import { Suspense } from "react";
 
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import Image from "next/image";
+import Link from "next/link";
+
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { Skeleton } from "@/components/ui/skeleton";
+
+import { blurhashToBase64 } from "blurhash-base64";
 
 interface TechCardProps {
   title: string;
@@ -10,6 +20,10 @@ interface TechCardProps {
   tooltip?: string;
 }
 
+const TechCardSkeleton = () => {
+  return <Skeleton className="h-40 w-40 lg:h-[50] lg:w-[50] rounded-md" />;
+};
+
 const TechCard = ({ title, url, image, tooltip }: TechCardProps) => {
   return (
     <TooltipProvider>
@@ -17,23 +31,32 @@ const TechCard = ({ title, url, image, tooltip }: TechCardProps) => {
         <TooltipTrigger asChild>
           <Link href={url} target="_blank">
             <div className="h-[90px] w-[140px] p-5 lg:h-[100px] lg:w-[100px] rounded-md hover:scale-105 flex flex-col gap-2 items-center justify-center bg-secondary">
-              <Image
-                priority
-                src={image}
-                alt={title}
-                width={50}
-                height={50}
-                className="hidden lg:flex"
-              />
-              <Image
-                priority
-                src={image}
-                alt={title}
-                width={40}
-                height={40}
-                className="flex lg:hidden"
-              />
-              <p className="text-[12px] lg:text-xs text-center text-muted-foreground">{title}</p>
+              <Suspense fallback={<TechCardSkeleton />}>
+                <Image
+                  priority
+                  src={image}
+                  alt={title}
+                  width={50}
+                  height={50}
+                  className="hidden lg:flex"
+                  placeholder="blur"
+                  blurDataURL={blurhashToBase64("LD7Uk[D$IVt6~pE2M|s:?GIqR-oK")}
+                />
+                <Image
+                  priority
+                  src={image}
+                  alt={title}
+                  width={40}
+                  height={40}
+                  className="flex lg:hidden"
+                  placeholder="blur"
+                  blurDataURL={blurhashToBase64("LD7Uk[D$IVt6~pE2M|s:?GIqR-oK")}
+                />
+              </Suspense>
+
+              <p className="text-[12px] lg:text-xs text-center text-muted-foreground">
+                {title}
+              </p>
             </div>
           </Link>
         </TooltipTrigger>
