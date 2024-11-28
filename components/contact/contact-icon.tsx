@@ -1,8 +1,10 @@
-'use client';
-import { useState } from 'react';
-import { Github, Linkedin, Copy, ClipboardCheck } from 'lucide-react';
-import { Button } from '../ui/button';
-import Link from 'next/link';
+"use client";
+import { useState } from "react";
+import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
+
+import { Github, Linkedin, Copy, ClipboardCheck } from "lucide-react";
 
 interface ContactIconProps {
   title: string;
@@ -14,18 +16,18 @@ export function ContactIcon({ title, url }: ContactIconProps) {
 
   const copyToClipboard = async () => {
     try {
-      await navigator.clipboard.writeText('nadolny.dev@gmail.com');
+      await navigator.clipboard.writeText("nadolny.dev@gmail.com");
       setCopied(true);
       setTimeout(() => {
         setCopied(false);
       }, 2000);
     } catch (err) {
-      console.error('Failed to copy: ', err);
+      console.error("Failed to copy: ", err);
     }
   };
 
   let content = <></>;
-  if (title === 'LinkedIn') {
+  if (title === "LinkedIn") {
     content = (
       <Button className="w-full bg-accent hover:bg-muted-foreground">
         <Link href={url} target="_blank">
@@ -33,7 +35,7 @@ export function ContactIcon({ title, url }: ContactIconProps) {
         </Link>
       </Button>
     );
-  } else if (title === 'Github') {
+  } else if (title === "Github") {
     content = (
       <Button className="w-full bg-accent hover:bg-muted-foreground">
         <Link href={url} target="_blank">
@@ -45,11 +47,12 @@ export function ContactIcon({ title, url }: ContactIconProps) {
     content = (
       <Button
         className="w-full bg-accent hover:bg-muted-foreground ease-in"
-        onClick={copyToClipboard}>
+        onClick={copyToClipboard}
+      >
         {copied && (
           <>
             <ClipboardCheck className="text-primary mr-1 text-xs" />
-            <span className="text-primary text-xs">{'copied!'}</span>
+            <span className="text-primary text-xs">{"copied!"}</span>
           </>
         )}
         {!copied && (

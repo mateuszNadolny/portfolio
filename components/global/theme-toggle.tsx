@@ -1,8 +1,7 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import { useTheme } from 'next-themes';
-import { cn } from '@/lib/utils';
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 
 interface ThemeToggleProps {
   className?: string;
@@ -10,17 +9,17 @@ interface ThemeToggleProps {
 
 export function ModeToggle({ className }: ThemeToggleProps) {
   const { resolvedTheme, setTheme } = useTheme();
-  const [currentTheme, setCurrentTheme] = useState<string>('');
+  const [currentTheme, setCurrentTheme] = useState<string>("");
 
   const handleTheme = () => {
-    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
   };
 
   useEffect(() => {
-    if (resolvedTheme === 'dark') {
-      setCurrentTheme('<dark mode />');
-    } else if (resolvedTheme === 'light') {
-      setCurrentTheme('<light mode />');
+    if (resolvedTheme === "dark") {
+      setCurrentTheme("<dark mode />");
+    } else if (resolvedTheme === "light") {
+      setCurrentTheme("<light mode />");
     }
   }, [resolvedTheme]);
 

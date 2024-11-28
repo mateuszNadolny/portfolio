@@ -1,16 +1,17 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
-import { Menu } from 'lucide-react';
+import { useState } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { ModeToggle } from './theme-toggle';
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { ModeToggle } from "@/components/global/theme-toggle";
 
-import { cn } from '@/lib/utils';
+import { cn } from "@/lib/utils";
 
-import { NAV_ELEMENTS } from '@/constants/navbar-data';
+import { NAV_ELEMENTS } from "@/constants/navbar-data";
+
+import { Menu } from "lucide-react";
 
 const NavbarMobile = () => {
   const pathname = usePathname();
@@ -25,7 +26,7 @@ const NavbarMobile = () => {
         <SheetContent side="left">
           <nav className="mt-10">
             <h2 className="text-lg text-center mb-8 font-extrabold transition-colors">
-              {'<nadolny.dev />'}
+              {"<nadolny.dev />"}
             </h2>
             <ul className="flex flex-col h-full w-full list-none relative">
               {NAV_ELEMENTS.map((item) => (
@@ -34,20 +35,25 @@ const NavbarMobile = () => {
                   onClick={() => setOpen(false)}
                   className={cn(
                     "text-[12px] p-3 md:text-sm cursor-pointer flex items-center justify-center rounded-md transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50'",
-                    pathname === item.url ? 'bg-accent text-accent-foreground' : ''
-                  )}>
+                    pathname === item.url
+                      ? "bg-accent text-accent-foreground"
+                      : ""
+                  )}
+                >
                   <Link href={item.url!}>{item.text}</Link>
                 </li>
               ))}
               <li
                 className="text-[12px] p-3 md:text-sm cursor-pointer flex items-center justify-center rounded-md transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50'"
-                onClick={() => setOpen(false)}>
+                onClick={() => setOpen(false)}
+              >
                 <Link
                   href={
-                    'https://drive.google.com/file/d/1lZwKt9yD4yIozK2RBa1Fh7ZBZV763uXA/view?usp=sharing'
+                    "https://drive.google.com/file/d/1lZwKt9yD4yIozK2RBa1Fh7ZBZV763uXA/view?usp=sharing"
                   }
-                  target="blank">
-                  {'<resume />'}
+                  target="blank"
+                >
+                  {"<resume />"}
                 </Link>
               </li>
             </ul>
