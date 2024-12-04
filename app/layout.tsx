@@ -27,7 +27,7 @@ export default function RootLayout({
       <head>
         <PlausibleProvider domain="mnadolny.com" />
       </head>
-      <body className={`${inter.className} max-w-screen max-h-screen`}>
+      <body className={`${inter.className} min-h-screen flex flex-col`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -38,7 +38,7 @@ export default function RootLayout({
           <NavbarMobile />
           <ShootingStars />
           <StarsBackground starDensity={0.0015} twinkleProbability={0} />
-          {children}
+          <main className="flex-1 flex flex-col">{children}</main>
           <Toaster />
         </ThemeProvider>
       </body>

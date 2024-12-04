@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 const TechPage = () => {
   return (
-    <div className="h-screen w-full flex flex-col items-center justify-center pb-10 no-srollbar">
+    <div className="flex-1 w-full flex flex-col items-center justify-start relative pt-20">
       <div className="fixed lg:hidden top-0 h-[50px] w-full flex items-center justify-center bg-background z-20">
         <p className="text-xs">{"<techs />"}</p>
       </div>

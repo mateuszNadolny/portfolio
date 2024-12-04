@@ -45,15 +45,15 @@ export default function Home() {
   };
 
   return (
-    <main className="h-screen">
-      <div className="h-full flex flex-col items-center justify-center relative lg:gap-5">
-        <p className="text-xs absolute lg:hidden top-5">{"<about me />"}</p>
+    <section className="flex-1 w-full flex flex-col items-center lg:justify-start relative">
+      <div className="flex flex-col items-center justify-center relative lg:gap-5 ">
+        <p className="text-xs mt-5 lg:hidden">{"<about me />"}</p>
         <TypewriterEffectSmooth
           words={typewriterWords}
-          className="hidden lg:flex"
+          className="hidden lg:flex pt-36"
         />
         <motion.div
-          className="w-full hidden lg:flex flex-col items-center gap-4 "
+          className="w-full hidden lg:flex flex-col items-center gap-4"
           initial="hidden"
           animate="visible"
           transition={{
@@ -63,7 +63,7 @@ export default function Home() {
         >
           <motion.div
             variants={variants}
-            className="w-full flex justify-center mb-3"
+            className="w-full flex justify-center"
           >
             <h2 className="text-3xl text-center px-3 font-bold">
               I am a fullstack web developer based in Warsaw, Poland
@@ -89,7 +89,7 @@ export default function Home() {
         >
           <motion.div
             variants={variants}
-            className="w-full flex justify-center"
+            className="w-full flex justify-center pt-20"
           >
             <h2 className="text-3xl text-center px-3 font-bold">
               {"Hello there! 👋"} <br /> {"My name is "} <br />
@@ -116,6 +116,6 @@ export default function Home() {
           </motion.div>
         </motion.div>
       </div>
-    </main>
+    </section>
   );
 }

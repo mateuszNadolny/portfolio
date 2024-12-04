@@ -18,7 +18,7 @@ const NavbarMobile = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="lg:hidden relative">
+    <div className="lg:hidden relative z-30">
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
           <Menu className="fixed mt-4 ml-4 z-10" />

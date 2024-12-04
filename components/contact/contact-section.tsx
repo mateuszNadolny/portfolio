@@ -17,7 +17,7 @@ const ContactSection = () => {
   };
   return (
     <motion.div
-      className="w-full flex flex-col items-center gap-4 z-10 lg:overflow-hidden"
+      className="w-full flex-1 flex flex-col space-y-4 mt-[55px] lg:mt-5"
       initial="hidden"
       animate="visible"
       transition={{

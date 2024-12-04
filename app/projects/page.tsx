@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 const ProjectsPage = () => {
   return (
-    <div className="h-screen w-full flex flex-col items-center justify-center">
+    <div className="flex-1 w-full flex flex-col items-center justify-center relative">
       <div className="fixed lg:hidden top-0 h-[50px] w-full flex flex-col items-center justify-center bg-background z-[9]">
         <p className="text-xs">{"<projects />"}</p>
       </div>
