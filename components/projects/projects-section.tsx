@@ -1,64 +1,32 @@
-'use client';
+"use client";
 
-import ProjectCard from './project-card';
-import { PROJECT_DATA } from '@/constants/projects-data';
-import { motion } from 'framer-motion';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious
-} from '@/components/ui/carousel';
+import ProjectCard from "./project-card";
+import { PROJECT_DATA } from "@/constants/projects-data";
+import { motion } from "framer-motion";
 
 const ProjectSection = () => {
   return (
-    <div className="pt-0 no-scrollbar overflow-scroll lg:overflow-hidden">
-      <div className="hidden lg:flex gap-3 lg:gap-12 overflow-x-scroll lg:overflow-hidden no-scrollbar">
-        {PROJECT_DATA.map((item, i) => (
+    <div className="max-w-7xl mx-auto px-4 pb-4 mt-[95rem] lg:mt-[35rem] lg:pt-0 lg:z-20">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-fr">
+        {PROJECT_DATA.map((project, i) => (
           <motion.div
-            key={item.id}
+            key={project.id}
+            className={`${
+              i % 4 === 0 || i % 4 === 3 ? "md:col-span-2" : "md:col-span-1"
+            } h-full`}
             initial={{ opacity: 0, translateY: -50 }}
             animate={{ opacity: 1, translateY: 0 }}
             transition={{
               duration: 0.3,
               delay: i * 0.2,
-              type: 'spring',
+              type: "spring",
               stiffness: 260,
-              damping: 20
-            }}>
-            <ProjectCard
-              key={item.id}
-              title={item.title}
-              description={item.description}
-              techs={item.techs}
-              image={item.image}
-              github={item.github}
-              live={item.live}
-            />
+              damping: 20,
+            }}
+          >
+            <ProjectCard {...project} className="h-full" />
           </motion.div>
         ))}
-      </div>
-      <div className="flex flex-col lg:hidden">
-        <Carousel className="w-full max-w-[350px]">
-          <CarouselContent>
-            {PROJECT_DATA.map((item) => (
-              <CarouselItem key={item.id}>
-                <ProjectCard
-                  key={item.id}
-                  title={item.title}
-                  description={item.description}
-                  techs={item.techs}
-                  image={item.image}
-                  github={item.github}
-                  live={item.live}
-                />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
       </div>
     </div>
   );

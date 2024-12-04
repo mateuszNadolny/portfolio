@@ -36,7 +36,7 @@ const NavbarMobile = () => {
                   className={cn(
                     "text-[12px] p-3 md:text-sm cursor-pointer flex items-center justify-center rounded-md transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50'",
                     pathname === item.url
-                      ? "bg-accent text-accent-foreground"
+                      ? "bg-gradient-to-br from-gray-700 via-gray-800 to-gray-900 text-accent-foreground"
                       : ""
                   )}
                 >
@@ -58,9 +58,7 @@ const NavbarMobile = () => {
               </li>
             </ul>
           </nav>
-          <div className="absolute bottom-10 -translate-x-1/2 left-1/2 ">
-            <ModeToggle />
-          </div>
+          <div className="absolute bottom-10 -translate-x-1/2 left-1/2 "></div>
         </SheetContent>
       </Sheet>
     </div>

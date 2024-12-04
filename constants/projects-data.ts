@@ -34,12 +34,21 @@ export const PROJECT_DATA: Project[] = [
   {
     id: "chatter",
     title: "Chatter",
-    description:
-      "A fullstack, realtime chat app. Build with Next.js and MongoDB",
+    description: "A fullstack, realtime chat app.",
     techs:
       "Next.js 14 / React.js / Typescript / Tailwind CSS / shadcn / NextAuth / zod / MongoDB / Prisma / axios / Zustand",
     image: "/chatter.png",
     github: "https://github.com/mateuszNadolny/chatter",
     live: "https://chatter-connect.vercel.app/",
+  },
+  {
+    id: "portfolio",
+    title: "Porfolio",
+    description: "Personal portfolio.",
+    techs:
+      "Next.js 14 / React.js / Typescript / Tailwind CSS / shadcn / NextAuth / zod / MongoDB / Prisma / axios / Zustand",
+    image: "/portfolio.png",
+    github: "https://github.com/mateuszNadolny/portfolio",
+    live: "https://mnadolny.com",
   },
 ];

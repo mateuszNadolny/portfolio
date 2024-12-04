@@ -1,8 +1,8 @@
-'use client';
-import { ContactForm } from '@/components/contact/contact-form';
-import ContactIconSection from '@/components/contact/contact-icon-section';
+"use client";
+import { ContactForm } from "@/components/contact/contact-form";
+import ContactIconSection from "@/components/contact/contact-icon-section";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const ContactSection = () => {
   const variants = {
@@ -10,19 +10,20 @@ const ContactSection = () => {
     visible: { opacity: 1, translateY: 0 },
     transition: {
       duration: 0.2,
-      type: 'spring',
+      type: "spring",
       stiffness: 260,
-      damping: 20
-    }
+      damping: 20,
+    },
   };
   return (
     <motion.div
-      className="w-full flex flex-col items-center gap-4"
+      className="w-full flex flex-col items-center gap-4 z-10 lg:overflow-hidden"
       initial="hidden"
       animate="visible"
       transition={{
-        staggerChildren: 0.2
-      }}>
+        staggerChildren: 0.2,
+      }}
+    >
       <motion.div variants={variants} className="w-full flex justify-center">
         <ContactForm />
       </motion.div>

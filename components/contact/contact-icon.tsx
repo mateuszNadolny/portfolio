@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 import { Github, Linkedin, Copy, ClipboardCheck } from "lucide-react";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 interface ContactIconProps {
   title: string;
@@ -40,6 +41,14 @@ export function ContactIcon({ title, url }: ContactIconProps) {
       <Button className="w-full bg-accent hover:bg-muted-foreground">
         <Link href={url} target="_blank">
           <Github className="text-primary" />
+        </Link>
+      </Button>
+    );
+  } else if (title === "X") {
+    content = (
+      <Button className="w-full bg-accent hover:bg-muted-foreground">
+        <Link href={url} target="_blank">
+          <FaSquareXTwitter className="text-primary h-6 w-6" />
         </Link>
       </Button>
     );

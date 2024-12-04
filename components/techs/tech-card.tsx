@@ -30,7 +30,7 @@ const TechCard = ({ title, url, image, tooltip }: TechCardProps) => {
       <Tooltip>
         <TooltipTrigger asChild>
           <Link href={url} target="_blank">
-            <div className="h-[90px] w-[140px] p-5 lg:h-[100px] lg:w-[100px] rounded-md hover:scale-105 flex flex-col gap-2 items-center justify-center bg-secondary">
+            <div className="h-[90px] w-[140px] p-5 lg:h-[100px] lg:w-[100px] rounded-md flex flex-col gap-2 items-center justify-center bg-gradient-to-br from-secondary to-gray-900 hover:bg-secondary/90 hover:scale-105 transition-all duration-300">
               <Suspense fallback={<TechCardSkeleton />}>
                 <Image
                   priority
@@ -54,7 +54,7 @@ const TechCard = ({ title, url, image, tooltip }: TechCardProps) => {
                 />
               </Suspense>
 
-              <p className="text-[12px] lg:text-xs text-center text-muted-foreground">
+              <p className="text-[12px] lg:text-xs text-center text-gray-300">
                 {title}
               </p>
             </div>

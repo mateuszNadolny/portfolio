@@ -1,23 +1,24 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
 
-import { ThemeProvider } from '@/components/providers/theme-provider';
-import PlausibleProvider from 'next-plausible';
-import { Toaster } from '@/components/ui/toaster';
-import Navbar from '@/components/global/navbar';
-import NavbarMobile from '@/components/global/navbar-mobile';
-import { ModeToggle } from '@/components/global/theme-toggle';
+import PlausibleProvider from "next-plausible";
+import { ThemeProvider } from "@/components/providers/theme-provider";
+import { Toaster } from "@/components/ui/toaster";
+import Navbar from "@/components/global/navbar";
+import { ShootingStars } from "@/components/ui/shooting-stars";
+import { StarsBackground } from "@/components/ui/start-background";
+import NavbarMobile from "@/components/global/navbar-mobile";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Mateusz Nadolny | Fullstack Web Developer',
-  description: 'Portfolio page of Mateusz Nadolny'
+  title: "Mateusz Nadolny | Fullstack Web Developer",
+  description: "Portfolio page of Mateusz Nadolny",
 };
 
 export default function RootLayout({
-  children
+  children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
@@ -26,13 +27,19 @@ export default function RootLayout({
       <head>
         <PlausibleProvider domain="mnadolny.com" />
       </head>
-      <body className={`${inter.className} max-w-screen max-h-screen no-scrollbar`}>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+      <body className={`${inter.className} max-w-screen max-h-screen`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
           <Navbar />
           <NavbarMobile />
+          <ShootingStars />
+          <StarsBackground starDensity={0.0015} twinkleProbability={0} />
           {children}
           <Toaster />
-          <ModeToggle className={'hidden lg:flex fixed bottom-10 w-full justify-center'} />
         </ThemeProvider>
       </body>
     </html>
