@@ -37,7 +37,7 @@ export default function RootLayout({
           <Navbar />
           <NavbarMobile />
           <ShootingStars />
-          <StarsBackground starDensity={0.0015} twinkleProbability={0} />
+          <StarsBackground starDensity={0.00015} twinkleProbability={0} />
           <main className="flex-1 flex flex-col">{children}</main>
           <Toaster />
         </ThemeProvider>

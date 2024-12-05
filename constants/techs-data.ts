@@ -1,203 +1,131 @@
-type Tech = {
-  id: string;
-  group: string;
-  title: string;
-  tooltip?: string;
-  url: string;
-  image: string;
-};
+import { TechCategory } from "./types";
 
-export const TECH_ELEMENTS: Tech[] = [
+import {
+  Code2,
+  Layout,
+  Server,
+  ShoppingCart,
+  TestTube,
+  Workflow,
+  Pen,
+} from "lucide-react";
+
+export const techCategories: TechCategory[] = [
   {
-    id: "nextjs",
-    group: "lang",
-    title: "Next.js",
-    url: "https://nextjs.org/",
-    image: "/nextjs.png",
+    name: "Frontend Development",
+    icon: Code2,
+    technologies: [
+      {
+        name: "HTML5",
+        icon: "🌐",
+        url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+      },
+
+      {
+        name: "JavaScript",
+        icon: "📜",
+        url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      },
+      {
+        name: "TypeScript",
+        icon: "📘",
+        url: "https://www.typescriptlang.org/",
+      },
+      { name: "React", icon: "⚛️", url: "https://reactjs.org/" },
+      { name: "Next.js", icon: "▲", url: "https://nextjs.org/" },
+
+      { name: "Redux", icon: "🔄", url: "https://redux.js.org/" },
+      { name: "Zustand", icon: "🔄", url: "https://zustand.docs.pmnd.rs/" },
+    ],
   },
   {
-    id: "react",
-    group: "lang",
-    title: "React",
-    url: "https://reactjs.org/",
-    image: "/react.png",
+    name: "UI Development",
+    icon: Layout,
+    technologies: [
+      { name: "CSS3", icon: "🎨", url: "https://www.w3schools.com/css/" },
+      { name: "Tailwind CSS", icon: "🎨", url: "https://tailwindcss.com/" },
+      { name: "Bootstrap", icon: "👢", url: "https://getbootstrap.com/" },
+      {
+        name: "CSS Modules",
+        icon: "🎨",
+        url: "https://github.com/css-modules/css-modules",
+      },
+      {
+        name: "Framer Motion",
+        icon: "🎥",
+        url: "https://www.framer.com/motion/",
+      },
+    ],
   },
   {
-    id: "typescript",
-    group: "lang",
-    title: "TypeScript",
-    url: "https://www.typescriptlang.org/",
-    image: "/typescript.png",
+    name: "Backend Development & Database",
+    icon: Server,
+    technologies: [
+      {
+        name: "Rest API",
+        icon: "↔️",
+        url: "https://pl.wikipedia.org/wiki/Representational_state_transfer",
+      },
+      { name: "Prisma", icon: "🟢", url: "https://expressjs.com/" },
+      { name: "MongoDB", icon: "🍃", url: "https://www.mongodb.com/" },
+      { name: "Supabase", icon: "🟢", url: "https://supabase.com/" },
+      { name: "Firebase", icon: "🔥", url: "https://firebase.google.com/" },
+      { name: "Pusher", icon: "🔄", url: "https://pusher.com/" },
+    ],
   },
   {
-    id: "redux",
-    group: "lang",
-    title: "Redux",
-    url: "https://redux.js.org/",
-    image: "/redux.png",
+    name: "Testing",
+    icon: TestTube,
+    technologies: [
+      { name: "Jest", icon: "🧪", url: "https://jestjs.io/" },
+      {
+        name: "React Testing Library",
+        icon: "🧪",
+        url: "https://testing-library.com/react/",
+      },
+      { name: "MSW", icon: "🧪", url: "https://mswjs.io/" },
+    ],
   },
   {
-    id: "zustand",
-    group: "lang",
-    title: "Zustand",
-    url: "https://github.com/pmndrs/zustand",
-    image: "/zustand.png",
+    name: "CMS",
+    icon: Workflow,
+    technologies: [
+      {
+        name: "AEM",
+        icon: "🌐",
+        url: "https://business.adobe.com/products/experience-manager/adobe-experience-manager.html",
+      },
+      { name: "Drupal CMS", icon: "🌐", url: "https://www.drupal.org/" },
+    ],
   },
   {
-    id: "cssmodules",
-    group: "ui",
-    title: "CSS Modules",
-    url: "https://github.com/css-modules/css-modules",
-    image: "/cssmodules.png",
+    name: "eCommerce",
+    icon: ShoppingCart,
+    technologies: [
+      {
+        name: "SAP Hybris",
+        icon: "🛒",
+        url: "https://www.sap.com/poland/products/acquired-brands/what-is-hybris.html",
+      },
+      { name: "Syndigo", icon: "🛒", url: "https://www.syndigo.com/" },
+    ],
   },
   {
-    id: "bootstrap",
-    group: "ui",
-    title: "Bootstrap",
-    url: "https://getbootstrap.com/",
-    image: "/bootstrap.png",
-  },
-  {
-    id: "tailwind",
-    group: "ui",
-    title: "TailwindCSS",
-    url: "https://tailwindcss.com/",
-    image: "/tailwind.svg",
-  },
-  {
-    id: "primeflex",
-    group: "ui",
-    title: "PrimeFlex",
-    url: "https://www.primeflex.org/",
-    image: "/primeflex.png",
-  },
-  {
-    id: "framermotion",
-    group: "ui",
-    title: "Framer Motion",
-    url: "https://www.framer.com/motion/",
-    image: "/framermotion.svg",
-  },
-  {
-    id: "shadcn",
-    group: "ui",
-    title: "shadcn",
-    url: "https://ui.shadcn.com/",
-    image: "/shadcn.png",
-  },
-  {
-    id: "nextui",
-    group: "ui",
-    title: "NextUI",
-    url: "https://nextui.org/",
-    image: "/nextui.png",
-  },
-  {
-    id: "primereact",
-    group: "ui",
-    title: "PrimeReact",
-    url: "https://www.primefaces.org/react",
-    image: "/primereact.svg",
-  },
-  {
-    id: "aceternity",
-    group: "ui",
-    title: "AceternityUI",
-    url: "https://ui.aceternity.com/",
-    image: "/aceternity.png",
-  },
-  {
-    id: "prisma",
-    group: "db",
-    title: "Prisma",
-    url: "https://www.prisma.io/",
-    image: "/prisma.png",
-  },
-  {
-    id: "supabase",
-    group: "db",
-    title: "Supabase",
-    url: "https://supabase.com/",
-    image: "/supabase.png",
-  },
-  {
-    id: "firebase",
-    group: "db",
-    title: "Firebase",
-    url: "https://firebase.google.com/",
-    image: "/firebase.png",
-  },
-  {
-    id: "mongodb",
-    group: "db",
-    title: "MongoDB",
-    url: "https://www.mongodb.com/",
-    image: "/mongodb.svg",
-  },
-  {
-    id: "pusher",
-    group: "db",
-    title: "Pusher",
-    url: "https://pusher.com/",
-    image: "/pusher.png",
-  },
-  {
-    id: "jest",
-    group: "test",
-    title: "Jest",
-    url: "https://jestjs.io/",
-    image: "/jest.png",
-  },
-  {
-    id: "reacttestinglibrary",
-    group: "test",
-    title: "RTL",
-    tooltip: "React Testing Library",
-    url: "https://testing-library.com/react/",
-    image: "/reacttestinglibrary.png",
-  },
-  {
-    id: "msw",
-    group: "test",
-    title: "MSW",
-    tooltip: "Mock Service Worker",
-    url: "https://mswjs.io/",
-    image: "/msw.png",
-  },
-  {
-    id: "git",
-    group: "tools",
-    title: "Git",
-    url: "https://git-scm.com/",
-    image: "/git.png",
-  },
-  {
-    id: "figma",
-    group: "tools",
-    title: "Figma",
-    url: "https://www.figma.com/",
-    image: "/figma.png",
-  },
-  {
-    id: "jira",
-    group: "tools",
-    title: "Jira",
-    url: "https://www.atlassian.com/software/jira",
-    image: "/jira.png",
-  },
-  {
-    id: "aem",
-    group: "cms",
-    title: "AEM",
-    tooltip: "Adobe Experience Manager",
-    url: "https://business.adobe.com/products/experience-manager/adobe-experience-manager.html",
-    image: "/aem.png",
-  },
-  {
-    id: "drupal",
-    group: "cms",
-    title: "Drupal",
-    url: "https://www.drupal.org/",
-    image: "/drupal.png",
+    name: "Other tools",
+    icon: Pen,
+    technologies: [
+      { name: "Git", icon: "🔄", url: "https://git-scm.com/" },
+      { name: "Figma", icon: "🎨", url: "https://www.figma.com/" },
+      {
+        name: "Jira",
+        icon: "🧪",
+        url: "https://www.atlassian.com/software/jira",
+      },
+      {
+        name: "Confluence",
+        icon: "🧪",
+        url: "https://www.atlassian.com/software/confluence",
+      },
+    ],
   },
 ];
