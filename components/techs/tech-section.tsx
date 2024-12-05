@@ -2,7 +2,6 @@
 
 import TechCard from "./tech-card";
 import { motion } from "framer-motion";
-import { techCategories } from "@/constants/techs-data";
 import { TechCategory } from "@/constants/types";
 
 interface TechGridProps {
@@ -15,8 +14,8 @@ const TechSection: React.FC<TechGridProps> = ({ category }) => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1, // Shorter stagger for tech cards within a section
-        delayChildren: 0.2, // Small delay after the section appears
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
       },
     },
   };
