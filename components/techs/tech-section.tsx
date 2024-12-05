@@ -34,7 +34,7 @@ const TechSection: React.FC<TechGridProps> = ({ category }) => {
       animate="visible"
     >
       <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
-        {<category.icon className="w-6 h-6 text-indigo-600" />}
+        {<category.icon className="w-6 h-6 text-blue-500" />}
         {category.name}
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4  gap-4">
