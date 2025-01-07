@@ -31,7 +31,7 @@ export default function RootLayout({
       <head>
         <PlausibleProvider domain="mnadolny.com" />
       </head>
-      <body className={`${notoSans.className} min-h-screen bg-[#0f1010]`}>
+      <body className={`${ibmPlexSans.className} min-h-screen bg-[#0f1010]`}>
         {children}
         <Toaster />
       </body>
