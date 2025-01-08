@@ -47,7 +47,7 @@ const Hero = () => {
           damping: 12,
           delay: 0.4,
         }}
-        className="z-20 bg-gradient-to-b from-neutral-400 to-neutral-200 text-[#0f1010] px-4 py-2 rounded-xl font-noto font-[400] hover:bg-gradient-to-b hover:from-neutral-300 hover:to-neutral-100"
+        className="z-20 bg-gradient-to-b from-neutral-400 to-neutral-200 text-[#0f1010] text-xs sm:text-base px-2 py-2 md:px-4 md:py-2 rounded-xl font-noto font-[400] hover:bg-gradient-to-b hover:from-neutral-300 hover:to-neutral-100"
       >
         {`Let's build your online presence together`}
       </motion.button>
