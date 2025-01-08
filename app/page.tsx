@@ -5,7 +5,7 @@ import ContactCta from "@/components/global/contact-cta";
 
 export default function Home() {
   return (
-    <section className="w-screen min-h-screen">
+    <section className="min-h-screen">
       <Hero />
       <Work />
       <ContactCta />

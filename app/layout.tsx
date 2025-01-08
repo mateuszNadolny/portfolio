@@ -35,7 +35,9 @@ export default function RootLayout({
       <head>
         <PlausibleProvider domain="mnadolny.com" />
       </head>
-      <body className={`${ibmPlexSans.className} min-h-screen bg-[#0f1010]`}>
+      <body
+        className={`${ibmPlexSans.className} min-h-screen max-w-screen bg-[#0f1010]`}
+      >
         <Navbar />
         {children}
         <Toaster />

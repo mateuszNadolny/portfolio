@@ -7,8 +7,8 @@ export const footerItems = [
   },
   {
     label: "My work",
-    section: "work",
-    link: "",
+    section: "",
+    link: "/",
     ariaLabel: "Navigate to Our Work section",
   },
   {

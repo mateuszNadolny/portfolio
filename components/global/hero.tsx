@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { scrollToSection } from "@/lib/utils";
 
 const Hero = () => {
   return (
@@ -49,6 +50,7 @@ const Hero = () => {
         }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
+        onClick={() => scrollToSection("contact")}
         className="relative z-30 group bg-gradient-to-b from-neutral-300 to-neutral-100 
           text-[#0f1010] text-xs sm:text-base px-6 py-3 rounded-xl font-noto 
           font-[500] transition-all duration-300 ease-out

@@ -29,6 +29,7 @@ const ContactCta = () => {
   return (
     <motion.section
       initial="hidden"
+      id="contact"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
       variants={containerVariants}
