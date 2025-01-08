@@ -2,8 +2,10 @@
 import { useState } from "react";
 import Link from "next/link";
 
-import { Github, Linkedin, Copy, ClipboardCheck } from "lucide-react";
-import { FaSquareXTwitter } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
+import { SiLinkedin } from "react-icons/si";
+import { FaGithub, FaSquareXTwitter } from "react-icons/fa6";
+import { Copy, ClipboardCheck } from "lucide-react";
 
 interface ContactIconProps {
   title: string;
@@ -28,9 +30,9 @@ export function ContactIcon({ title, url }: ContactIconProps) {
   let content = <></>;
   if (title === "LinkedIn") {
     content = (
-      <button className="w-full bg-accent hover:bg-muted-foreground">
+      <button className="w-full">
         <Link href={url} target="_blank">
-          <Linkedin className="text-primary" />
+          <SiLinkedin className="text-neutral-500 text-[24px] md:text-[30px] hover:text-neutral-400 cursor-pointer" />
         </Link>
       </button>
     );
@@ -38,7 +40,7 @@ export function ContactIcon({ title, url }: ContactIconProps) {
     content = (
       <button className="w-full bg-accent hover:bg-muted-foreground">
         <Link href={url} target="_blank">
-          <Github className="text-primary" />
+          <FaGithub className="text-neutral-500 text-[24px] md:text-[34px] hover:text-neutral-400 cursor-pointer" />
         </Link>
       </button>
     );
@@ -46,28 +48,8 @@ export function ContactIcon({ title, url }: ContactIconProps) {
     content = (
       <button className="w-full bg-accent hover:bg-muted-foreground">
         <Link href={url} target="_blank">
-          <FaSquareXTwitter className="text-primary h-6 w-6" />
+          <FaSquareXTwitter className="text-neutral-500 text-[24px] md:text-[34px] hover:text-neutral-400 cursor-pointer" />
         </Link>
-      </button>
-    );
-  } else {
-    content = (
-      <button
-        className="w-full bg-accent hover:bg-muted-foreground ease-in"
-        onClick={copyToClipboard}
-      >
-        {copied && (
-          <>
-            <ClipboardCheck className="text-primary mr-1 text-xs" />
-            <span className="text-primary text-xs">{"copied!"}</span>
-          </>
-        )}
-        {!copied && (
-          <>
-            <Copy className="text-primary mr-1 text-xs" />
-            <span className="text-primary text-xs">{title}</span>
-          </>
-        )}
       </button>
     );
   }

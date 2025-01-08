@@ -80,12 +80,12 @@ export function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-5 w-[90%] lg:w-[30%]"
+        className="space-y-4 w-[90%] lg:w-[30%]"
       >
-        <h3 className="text-2xl font-bold  tracking-tight text-center mb-[-16px]">
+        <h3 className="text-2xl font-bold text-neutral-300 tracking-tight text-center">
           There are a few ways to contact me
         </h3>
-        <p className="text-center text-xs text-muted-foreground pb-4 border-b">
+        <p className="text-center text-xs text-neutral-500 pb-4">
           I am flexible and open to exploring both freelance opportunities and
           traditional job positions.
         </p>
@@ -138,7 +138,15 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <button type="submit" className="w-full" disabled={isLoading}>
+        <button
+          type="submit"
+          className="z-20 relative group w-full bg-gradient-to-b from-neutral-300 to-neutral-100
+          text-[#0f1010] text-xs sm:text-base px-6 py-2 rounded-xl font-noto
+          font-[600] transition-all duration-300 ease-out
+          hover:from-neutral-200 hover:to-white
+          focus:outline-none focus:ring-2 focus:ring-neutral-300 focus:ring-offset-2 focus:ring-offset-[#0f1010]"
+          disabled={isLoading}
+        >
           {!isLoading ? "Send" : <LoaderCircle className="animate-spin" />}
         </button>
       </form>

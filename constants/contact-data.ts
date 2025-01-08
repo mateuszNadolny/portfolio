@@ -12,9 +12,4 @@ export const CONTACT_DATA: Contact[] = [
     url: "https://www.linkedin.com/in/mateusz-nadolny-web-dev/",
   },
   { id: "x", title: "X", url: "https://x.com/codeslav" },
-  {
-    id: "mail",
-    title: "nadolny.dev@gmail.com",
-    url: "mailto:nadolny.dev@gmail.com",
-  },
 ];
