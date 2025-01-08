@@ -46,7 +46,7 @@ const WorkCard = ({
 
   const scale = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
   const opacity = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
-  const rotateX = useTransform(scrollYProgress, [0, 1], [30, 1]);
+  const rotateX = useTransform(scrollYProgress, [0, 1], [40, 1]);
   // const y = useTransform(scrollYProgress, [0, 1], [10, 0]);
 
   return (

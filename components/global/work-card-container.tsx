@@ -17,7 +17,7 @@ const WorkCardContainer = () => {
       >
         Latest Work
       </motion.h2>
-      <div className="grid grid-cols-1 gap-10 sm:gap-12 md:gap-24">
+      <div className="grid grid-cols-1 gap-10 sm:gap-12 md:gap-16">
         {WORK_DATA.map((work) => (
           <WorkCard key={work.id} {...work} />
         ))}
