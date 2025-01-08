@@ -2,8 +2,6 @@
 import { useState } from "react";
 import Link from "next/link";
 
-import { Button } from "@/components/ui/button";
-
 import { Github, Linkedin, Copy, ClipboardCheck } from "lucide-react";
 import { FaSquareXTwitter } from "react-icons/fa6";
 
@@ -30,31 +28,31 @@ export function ContactIcon({ title, url }: ContactIconProps) {
   let content = <></>;
   if (title === "LinkedIn") {
     content = (
-      <Button className="w-full bg-accent hover:bg-muted-foreground">
+      <button className="w-full bg-accent hover:bg-muted-foreground">
         <Link href={url} target="_blank">
           <Linkedin className="text-primary" />
         </Link>
-      </Button>
+      </button>
     );
   } else if (title === "Github") {
     content = (
-      <Button className="w-full bg-accent hover:bg-muted-foreground">
+      <button className="w-full bg-accent hover:bg-muted-foreground">
         <Link href={url} target="_blank">
           <Github className="text-primary" />
         </Link>
-      </Button>
+      </button>
     );
   } else if (title === "X") {
     content = (
-      <Button className="w-full bg-accent hover:bg-muted-foreground">
+      <button className="w-full bg-accent hover:bg-muted-foreground">
         <Link href={url} target="_blank">
           <FaSquareXTwitter className="text-primary h-6 w-6" />
         </Link>
-      </Button>
+      </button>
     );
   } else {
     content = (
-      <Button
+      <button
         className="w-full bg-accent hover:bg-muted-foreground ease-in"
         onClick={copyToClipboard}
       >
@@ -70,7 +68,7 @@ export function ContactIcon({ title, url }: ContactIconProps) {
             <span className="text-primary text-xs">{title}</span>
           </>
         )}
-      </Button>
+      </button>
     );
   }
 

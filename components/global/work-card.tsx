@@ -4,21 +4,8 @@ import { useRef, useState } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform,
-  MotionValue,
-} from "framer-motion";
+
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 interface WorkCardProps {
   id: string;
@@ -72,7 +59,7 @@ const WorkCard = ({
         )}`}</h3>
 
         <div className="flex flex-col lg:flex-row h-full items-center my-8 lg:my-auto">
-          <div className="w-full flex flex-col items-center lg:items-start lg:w-[47%] lg:mt-[-2rem]">
+          <div className="w-full flex flex-col items-center gap-4 lg:items-start lg:w-[47%] lg:mt-[-2rem]">
             <h4 className="text-neutral-200 text-3xl md:text-3xl lg:text-6xl font-serif font-[400]">
               {title}
             </h4>

@@ -21,7 +21,7 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className="flex flex-col items-center justify-start py-4 h-[18vh] sm:py-4 md:py-10 md:h-[25vh] bg-[#151514] relative overflow-clip"
+      className="flex flex-col items-center justify-start py-4 h-[25vh] sm:py-4 md:py-10 md:h-[25vh] bg-[#151514] relative overflow-clip"
       aria-label="Footer"
     >
       <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 items-center md:items-start text-slate-50">

@@ -4,7 +4,7 @@ const Work = () => {
   return (
     <section
       id="work"
-      className="min-h-screen w-full flex justify-center py-16"
+      className="min-h-screen w-full flex justify-center pt-16"
     >
       <WorkCardContainer />
     </section>

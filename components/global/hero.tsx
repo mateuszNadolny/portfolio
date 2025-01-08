@@ -47,7 +47,15 @@ const Hero = () => {
           damping: 12,
           delay: 0.4,
         }}
-        className="z-30 bg-gradient-to-b from-neutral-400 to-neutral-200 text-[#0f1010] text-xs sm:text-base px-2 py-2 md:px-4 md:py-2 rounded-xl font-noto font-[400] hover:bg-gradient-to-b hover:from-neutral-300 hover:to-neutral-100"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="relative z-30 group bg-gradient-to-b from-neutral-300 to-neutral-100 
+          text-[#0f1010] text-xs sm:text-base px-6 py-3 rounded-xl font-noto 
+          font-[500] transition-all duration-300 ease-out
+          hover:from-neutral-200 hover:to-white
+          focus:outline-none focus:ring-2 focus:ring-neutral-300 focus:ring-offset-2 focus:ring-offset-[#0f1010]"
+        role="button"
+        tabIndex={0}
       >
         {`Let's build your online presence together`}
       </motion.button>
@@ -105,7 +113,7 @@ const Hero = () => {
         initial={{ opacity: 0, x: 500 }}
         animate={{ opacity: 1, x: 0 }}
         whileInView={{
-          y: [-10, 50],
+          y: [-8, 60],
           rotate: [3, -3],
         }}
         viewport={{ once: false }}
@@ -154,13 +162,13 @@ const Hero = () => {
         initial={{ opacity: 0, x: 500 }}
         animate={{ opacity: 1, x: 0 }}
         whileInView={{
-          y: [-10, 50],
+          y: [-30, 70],
           rotate: [3, -3],
         }}
         viewport={{ once: false }}
         transition={{
           // Entrance animations
-          x: { duration: 1, ease: "easeOut", type: "spring" },
+          x: { duration: 1.2, ease: "easeOut", type: "spring" },
           opacity: { duration: 1, ease: "easeOut", type: "spring" },
           // Continuous animations
           y: {
@@ -168,6 +176,7 @@ const Hero = () => {
             ease: "easeInOut",
             repeat: Infinity,
             repeatType: "reverse",
+            delay: 0.2,
           },
           rotate: {
             duration: 4,

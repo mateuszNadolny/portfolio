@@ -6,7 +6,6 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import axios from "axios";
 
-import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -139,9 +138,9 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full" disabled={isLoading}>
+        <button type="submit" className="w-full" disabled={isLoading}>
           {!isLoading ? "Send" : <LoaderCircle className="animate-spin" />}
-        </Button>
+        </button>
       </form>
     </Form>
   );
