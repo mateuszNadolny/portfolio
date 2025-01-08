@@ -100,7 +100,7 @@ export function ContactForm() {
                 <ContactInput placeholder="J. Doe" {...field} />
               </FormControl>
 
-              <FormMessage />
+              <FormMessage className="text-xs text-red-500" />
             </FormItem>
           )}
         />
@@ -119,7 +119,7 @@ export function ContactForm() {
                 />
               </FormControl>
 
-              <FormMessage />
+              <FormMessage className="text-xs text-red-500" />
             </FormItem>
           )}
         />
@@ -134,7 +134,7 @@ export function ContactForm() {
                 <ContactTextarea placeholder="..." {...field} />
               </FormControl>
 
-              <FormMessage />
+              <FormMessage className="text-xs text-red-500" />
             </FormItem>
           )}
         />
