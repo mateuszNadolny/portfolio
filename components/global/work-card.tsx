@@ -1,10 +1,10 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
-
+import { blurhashToBase64 } from "blurhash-base64";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
 interface WorkCardProps {
@@ -73,6 +73,8 @@ const WorkCard = ({
               alt={title}
               width={500}
               height={500}
+              placeholder="blur"
+              blurDataURL={blurhashToBase64("LBA2TBcH4Txb00%$_MxZ?FibEQXT")}
               className=" rounded-[10px] md:object-contain lg:object-cover"
             />
           </div>
