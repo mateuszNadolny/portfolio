@@ -85,7 +85,7 @@ export function ContactForm() {
         <h3 className="text-2xl font-bold text-neutral-300 tracking-tight text-center">
           There are a few ways to contact me
         </h3>
-        <p className="text-center text-xs text-neutral-500 pb-4">
+        <p className="text-center text-xs text-neutral-500 font-[200] pb-4">
           I am flexible and open to exploring both freelance opportunities and
           traditional job positions.
         </p>
