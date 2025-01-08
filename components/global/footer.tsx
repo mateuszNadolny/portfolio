@@ -43,7 +43,7 @@ const Footer = () => {
             </button>
           ))}
         </div>
-        <div className="flex gap-8 md:gap-4 justify-center md:justify-end">
+        <div className="flex gap-8 md:gap-4 items-center justify-center md:justify-end">
           <Link href="https://github.com/mateuszNadolny" target="_blank">
             <FaGithub className="w-4 h-4 sm:w-6 sm:h-6 text-neutral-300 hover:text-neutral-400 transition-all duration-150 cursor-pointer" />
           </Link>
@@ -57,6 +57,7 @@ const Footer = () => {
           <Link href="https://x.com/codeslav" target="_blank">
             <FaSquareXTwitter className="w-4 h-4 sm:w-6 sm:h-6 text-neutral-300 hover:text-neutral-400 transition-all duration-150 cursor-pointer" />
           </Link>
+          <p className="text-neutral-300 text-xs select-all">{`nadolny.dev@gmail.com`}</p>
         </div>
       </div>
 
