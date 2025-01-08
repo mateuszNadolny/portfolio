@@ -80,7 +80,7 @@ const WorkCard = ({
               {description}
             </p>
           </div>
-          <div className="block lg:hidden mt-8 rounded-xl border-[13px] bg-neutral-800 border-neutral-800 ring-2 ring-neutral-800/20">
+          <div className="block lg:hidden mt-8 rounded-xl border-[13px] bg-neutral-800 border-neutral-800 ring-2 ring-neutral-400/20">
             <Image
               src={image}
               alt={title}
@@ -89,7 +89,7 @@ const WorkCard = ({
               className=" rounded-[10px] md:object-contain lg:object-cover"
             />
           </div>
-          <div className="hidden lg:block rounded-xl border-[13px] bg-neutral-800 border-neutral-800 ring-2 ring-neutral-800/20 md:w-[200px] md:h-[200px] lg:absolute lg:right-[-15rem] lg:bottom-[-4rem] lg:w-[70%] lg:h-[500px] ">
+          <div className="hidden lg:block rounded-xl border-[13px] bg-neutral-800 border-neutral-800 ring-2 ring-neutral-400/20 md:w-[200px] md:h-[200px] lg:absolute lg:right-[-15rem] lg:bottom-[-4rem] lg:w-[70%] lg:h-[500px] ">
             <Image
               src={image}
               alt={title}
