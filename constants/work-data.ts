@@ -5,6 +5,7 @@ export const WORK_DATA = [
     description: "Business Landing Page for Nordhaven Construction Company.",
     image: "/nordhaven.png",
     technologies: ["Next.js", "Tailwind CSS", "Shadcn/UI", "Framer Motion"],
+    url: "https://nordhaven-constructions.vercel.app/",
   },
   {
     id: "02",
@@ -13,6 +14,7 @@ export const WORK_DATA = [
       "Interactive web game that challenges players to complete form submissions as quickly as possible while maintaining accuracy.",
     image: "/speedrunner.png",
     technologies: ["Next.js", "Tailwind CSS", "Shadcn/UI", "Framer Motion"],
+    url: "https://form-speedrunner.com/",
   },
   {
     id: "03",
@@ -29,6 +31,7 @@ export const WORK_DATA = [
       "Supabase",
       "Prisma",
     ],
+    url: "https://selfspace.vercel.app/",
   },
   {
     id: "03",
@@ -48,5 +51,6 @@ export const WORK_DATA = [
       "axios",
       "zustand",
     ],
+    url: "https://chatter-connect.vercel.app/",
   },
 ];
