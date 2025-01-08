@@ -12,7 +12,7 @@ const notoSans = Noto_Sans({
 });
 const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
-  weight: ["200", "400", "600", "700"],
+  weight: ["100", "200", "400", "600", "700"],
 });
 
 export const metadata: Metadata = {
