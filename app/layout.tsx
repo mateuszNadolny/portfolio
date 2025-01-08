@@ -6,7 +6,10 @@ import PlausibleProvider from "next-plausible";
 import { Toaster } from "@/components/ui/toaster";
 import Navbar from "@/components/global/navbar";
 import Footer from "@/components/global/footer";
-const dmSerifText = DM_Serif_Text({ subsets: ["latin"], weight: "400" });
+const dmSerifText = DM_Serif_Text({
+  subsets: ["latin"],
+  weight: "400",
+});
 const notoSans = Noto_Sans({
   subsets: ["latin"],
   weight: ["200", "400", "600", "700"],
