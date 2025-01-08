@@ -1,12 +1,24 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { footerItems } from "@/constants/footer-data";
 import { scrollToSection } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa6";
 import { FaSquareXTwitter, FaLinkedinIn } from "react-icons/fa6";
+
 const Footer = () => {
+  const router = useRouter();
+
+  const handleClick = (section: string, link: string) => {
+    if (section) {
+      scrollToSection(section);
+    } else if (link) {
+      router.push(link);
+    }
+  };
+
   return (
     <motion.footer
       className="flex flex-col items-center justify-start py-4 h-[18vh] sm:py-4 md:py-10 md:h-[25vh] bg-[#151514] relative overflow-clip"
@@ -23,7 +35,7 @@ const Footer = () => {
           {footerItems.map((item) => (
             <button
               key={item.label}
-              onClick={() => scrollToSection(item.section)}
+              onClick={() => handleClick(item.section, item.link)}
               className="text-sm text-neutral-300 hover:text-neutral-400 transition-all duration-150 cursor-pointer"
             >
               {item.label}
