@@ -1,0 +1,52 @@
+export const WORK_DATA = [
+  {
+    id: "01",
+    title: "Nordhaven",
+    description: "Business Landing Page for Nordhaven Construction Company.",
+    image: "/nordhaven.png",
+    technologies: ["Next.js", "Tailwind CSS", "Shadcn/UI", "Framer Motion"],
+  },
+  {
+    id: "02",
+    title: "Form Speedrunner",
+    description:
+      "Interactive web game that challenges players to complete form submissions as quickly as possible while maintaining accuracy.",
+    image: "/speedrunner.png",
+    technologies: ["Next.js", "Tailwind CSS", "Shadcn/UI", "Framer Motion"],
+  },
+  {
+    id: "03",
+    title: "Selfspace",
+    description: "A place where you can meditate, breathe, focus and relax.",
+    image: "/selfspace.png",
+    technologies: [
+      "Next.js",
+      "Tailwind CSS",
+      "Shadcn/UI",
+      "Framer Motion",
+      "Clerk Auth",
+      "Zod",
+      "Supabase",
+      "Prisma",
+    ],
+  },
+  {
+    id: "03",
+    title: "Chatter",
+    description: "Fullstack, realtime chat app.",
+    image: "/chatter.png",
+    technologies: [
+      "Next.js",
+      "Tailwind CSS",
+      "Shadcn/UI",
+      "Framer Motion",
+      "NextAuth",
+      "Zod",
+      "MongoDB",
+      "Prisma",
+      "Pusher",
+      "axios",
+      "zustand",
+    ],
+  },
+];
