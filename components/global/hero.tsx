@@ -49,7 +49,7 @@ const Hero = () => {
         }}
         className="z-20 bg-gradient-to-b from-neutral-400 to-neutral-200 text-[#0f1010] px-4 py-2 rounded-xl font-noto font-[400] hover:bg-gradient-to-b hover:from-neutral-300 hover:to-neutral-100"
       >
-        {`Let's build your online presence`}
+        {`Let's build your online presence together`}
       </motion.button>
       <motion.div
         className="absolute w-[50px] h-[50px] lg:w-[420px] lg:h-[420px] top-24 md:top-20 right-auto lg:top-auto lg:bottom-32 lg:right-[4vw] xl:right-[8vw] 2xl:right-[12vw] z-20 opacity-[10%] sm:opacity-100"
