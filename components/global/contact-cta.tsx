@@ -35,7 +35,7 @@ const ContactCta = () => {
       className="flex relative flex-col justify-center items-center gap-4 px-4 h-[20rem] md:h-[70vh] my-16"
     >
       <motion.div
-        className="absolute inset-0 bg-gradient-to-b from-transparent via-neutral-600/40 to-transparent z-20"
+        className="absolute inset-0 bg-gradient-to-b from-transparent via-neutral-600/40 to-transparent z-10"
         animate={{
           opacity: [0.3, 0.8],
         }}
@@ -57,7 +57,7 @@ const ContactCta = () => {
         variants={itemVariants}
         className="max-w-2xl text-center text-neutral-400 text-base sm:text-xl font-sans font-[100] leading-relaxed"
       >
-        Let's Build Something Amazing Together
+        {`Let's Build Something Amazing Together`}
       </motion.h3>
 
       <motion.a
@@ -65,7 +65,7 @@ const ContactCta = () => {
         variants={itemVariants}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="relative group bg-gradient-to-b my-6 from-neutral-300 to-neutral-100
+        className="z-20 relative group bg-gradient-to-b my-6 from-neutral-300 to-neutral-100
           text-[#0f1010] text-xs sm:text-base px-6 py-3 rounded-xl font-noto
           font-[600] transition-all duration-300 ease-out
           hover:from-neutral-200 hover:to-white
