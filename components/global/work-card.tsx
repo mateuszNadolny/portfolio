@@ -44,7 +44,8 @@ const WorkCard = ({
     offset: ["0 .9", "1.1 1"],
   });
 
-  const scale = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
+  const scale = useSpring(scaleProgress, { stiffness: 90, damping: 10 });
   const opacity = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
   const rotateX = useTransform(scrollYProgress, [0, 1], [40, 1]);
   // const y = useTransform(scrollYProgress, [0, 1], [10, 0]);
@@ -64,7 +65,6 @@ const WorkCard = ({
           transformPerspective: 1000,
           transformOrigin: "bottom",
         }}
-        transition={{ duration: 0.2 }}
         className="container relative flex flex-col bg-[#151514] border-neutral-900 border-2 rounded-xl p-4 md:p-6 lg:p-8 lg:w-[80vw] h-auto lg:h-[70vh] overflow-hidden hover:shadow-2xl hover:shadow-neutral-400/10"
       >
         <h3 className="text-neutral-400 text-xs md:text-sm font-[200] uppercase md:mb-2 lg:mb-6">{`${id} | ${technologies.join(
