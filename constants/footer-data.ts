@@ -17,4 +17,10 @@ export const footerItems = [
     link: "/contact",
     ariaLabel: "Navigate to Contact section",
   },
+  {
+    label: "Resume",
+    section: "",
+    link: "https://drive.google.com/file/d/1lZwKt9yD4yIozK2RBa1Fh7ZBZV763uXA/view",
+    ariaLabel: "Navigate to Resume page",
+  },
 ];

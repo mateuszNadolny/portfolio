@@ -27,8 +27,7 @@ const Footer = () => {
       <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 items-center md:items-start text-slate-50">
         <div className="flex justify-center md:justify-start">
           <p className="text-xs tracking-tight bg-gradient-to-r from-zinc-200 to-gray-400 bg-clip-text text-transparent">
-            © Mateusz Nadolny. nadolny.dev@gmail.com <br /> 2025. All rights
-            reserved.
+            © Mateusz Nadolny. 2025. All rights reserved.
           </p>
         </div>
 
