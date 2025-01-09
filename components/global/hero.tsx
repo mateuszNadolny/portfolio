@@ -38,29 +38,55 @@ const Hero = () => {
         That Turn Visitors
         <br /> Into Customers
       </motion.h1>
-      <motion.button
-        initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{
-          duration: 0.8,
-          type: "spring",
-          stiffness: 100,
-          damping: 12,
-          delay: 0.4,
-        }}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={() => scrollToSection("contact")}
-        className="relative z-30 group bg-gradient-to-b from-neutral-300 to-neutral-100 
+      <div className="flex flex-col md:flex-row gap-4 md:gap-8 items-center justify-center">
+        <motion.button
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 0.8,
+            type: "spring",
+            stiffness: 100,
+            damping: 12,
+            delay: 0.4,
+          }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => scrollToSection("contact")}
+          className="relative z-30 group bg-gradient-to-b from-neutral-300 to-neutral-100 
           text-[#0f1010] text-xs sm:text-base px-6 py-3 rounded-xl font-noto 
           font-[500] transition-all duration-300 ease-out
           hover:from-neutral-200 hover:to-white
           focus:outline-none focus:ring-2 focus:ring-neutral-300 focus:ring-offset-2 focus:ring-offset-[#0f1010]"
-        role="button"
-        tabIndex={0}
-      >
-        {`Let's build your online presence together`}
-      </motion.button>
+          role="button"
+          tabIndex={0}
+        >
+          {`Let's build your online presence together`}
+        </motion.button>
+        <motion.button
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 0.8,
+            type: "spring",
+            stiffness: 100,
+            damping: 12,
+            delay: 0.4,
+          }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => scrollToSection("work")}
+          className="relative z-30 group border border-neutral-400 bg-[#0f1010]
+          text-neutral-200 text-xs sm:text-base px-6 py-3 rounded-xl font-noto 
+          font-[500] transition-all duration-300 ease-out
+          hover:bg-neutral-800 hover:text-neutral-100
+          focus:outline-none focus:ring-2 focus:ring-neutral-400 focus:ring-offset-2 focus:ring-offset-[#0f1010]"
+          role="button"
+          tabIndex={0}
+        >
+          {`See my work`}
+        </motion.button>
+      </div>
+
       <motion.div
         className="absolute w-[50px] h-[50px] lg:w-[420px] lg:h-[420px] top-24 md:top-20 right-auto lg:top-auto lg:bottom-32 lg:right-[4vw] xl:right-[8vw] 2xl:right-[12vw] z-20 opacity-[10%] sm:opacity-100"
         initial={{ opacity: 0, x: 500 }}
