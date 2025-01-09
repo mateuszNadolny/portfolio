@@ -42,7 +42,7 @@ const AboutTextSection = () => {
         <h1 className="scroll-m-20 text-neutral-300 text-2xl md:text-4xl font-serif mb-4 tracking-tight lg:text-5xl">
           {`Hey, I'm Mateusz`}
         </h1>
-        <p className="leading-7 text-neutral-400 mb-10 tracking-tight">
+        <p className="leading-7 text-neutral-400 mb-8 tracking-tight">
           For past three years I have been creating, updating and mantaining
           websites and online stores at{" "}
           <Link
@@ -59,7 +59,7 @@ const AboutTextSection = () => {
           </b>
           .
         </p>
-        <p className="leading-7 text-neutral-400 mb-10 tracking-tight">
+        <p className="leading-7 text-neutral-400 mb-8 tracking-tight">
           Coding since 2020. Pasionate about computer science since always.{" "}
           <b className="decoration-green-900 underline underline-offset-4">
             I thrive on building with modern web tools
@@ -73,7 +73,7 @@ const AboutTextSection = () => {
           by leveraging data-driven strategies to enhance user experience and
           drive measurable results.
         </p>
-        <p className="leading-7 text-neutral-400 mb-10 tracking-tight">
+        <p className="leading-7 text-neutral-400 mb-8 tracking-tight">
           I am constantly expanding my knowledge of web technologies, SaaS
           trends, and marketing strategies. Whether it is refining the art of
           crafting user-friendly interfaces or optimizing a site for better
