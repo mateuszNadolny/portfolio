@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="h-[95vh] md:h-[90vh] w-full md:pl-[10vw] lg:pl-[8vw] xl:pl-[8vw] 2xl:pl-[12vw] bg-[#0f1010] bg-dot-white/[0.2] relative flex flex-col items-center md:items-start justify-center overflow-hidden"
+      className="h-[100vh] md:h-[90vh] w-full md:pl-[10vw] lg:pl-[8vw] xl:pl-[8vw] 2xl:pl-[12vw] bg-[#0f1010] bg-dot-white/[0.2] relative flex flex-col items-center md:items-start justify-center overflow-hidden"
     >
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-[#0f1010] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       <motion.span
