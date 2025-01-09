@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { footerItems } from "@/constants/footer-data";
 import { scrollToSection } from "@/lib/utils";
-import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa6";
 import { FaSquareXTwitter, FaLinkedinIn } from "react-icons/fa6";
 
@@ -20,7 +19,7 @@ const Footer = () => {
   };
 
   return (
-    <motion.footer
+    <footer
       className="flex flex-col items-center justify-start py-4 h-[25vh] sm:py-4 md:py-10 md:h-[25vh] bg-[#151514] relative overflow-clip"
       aria-label="Footer"
     >
@@ -63,7 +62,7 @@ const Footer = () => {
       <h2 className="absolute bottom-[-45px] sm:bottom-[-15px] md:bottom-[-55px] text-[20px] sm:text-[50px] md:text-[80px] font-extrabold tracking-tight bg-gradient-to-r from-neutral-500 to-neutral-700 bg-clip-text text-transparent uppercase">
         Mateusz Nadolny
       </h2>
-    </motion.footer>
+    </footer>
   );
 };
 
