@@ -1,33 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import { containerVariants, itemVariants } from "@/constants/framer-variants";
 import { motion } from "framer-motion";
 
 const AboutTextSection = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        damping: 20,
-        stiffness: 100,
-      },
-    },
-  };
-
   return (
     <motion.div
       className="flex flex-col gap-4"
