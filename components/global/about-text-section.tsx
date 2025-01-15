@@ -20,7 +20,7 @@ const AboutTextSection = () => {
           {`Hey, I'm Mateusz`}
         </h1>
         <p className="leading-7 text-neutral-400 mb-8 tracking-tight">
-          For past three years I have been creating, updating and mantaining
+          For past three years I have been creating, updating and maintaining
           websites and online stores at{" "}
           <Link
             href="https://cheil.com"
