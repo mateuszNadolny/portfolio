@@ -43,7 +43,6 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Toaster />
-          <Footer />
         </body>
       </ReactLenis>
     </html>

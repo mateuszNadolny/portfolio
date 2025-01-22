@@ -34,6 +34,7 @@ const ContactCta = () => {
       viewport={{ once: true, margin: "-100px" }}
       variants={containerVariants}
       className="flex relative flex-col justify-center items-center gap-4 px-4 h-[20rem] md:h-[70vh] my-16"
+      style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
       <motion.div
         className="absolute inset-0 bg-gradient-to-b from-transparent via-neutral-600/40 to-transparent z-10"

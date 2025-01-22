@@ -9,6 +9,7 @@ export default function Home() {
       <Hero />
       <Work />
       <ContactCta />
+      <Footer />
     </section>
   );
 }
