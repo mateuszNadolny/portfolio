@@ -3,6 +3,7 @@ import { DM_Serif_Text, Noto_Sans, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 
 import PlausibleProvider from "next-plausible";
+import { ReactLenis } from "@/components/providers/lenis-provider";
 import { Toaster } from "@/components/ui/toaster";
 import Navbar from "@/components/global/navbar";
 import Footer from "@/components/global/footer";
@@ -35,14 +36,16 @@ export default function RootLayout({
       <head>
         <PlausibleProvider domain="mnadolny.com" />
       </head>
-      <body
-        className={`${ibmPlexSans.className} min-h-screen max-w-screen bg-[#0f1010]`}
-      >
-        <Navbar />
-        {children}
-        <Toaster />
-        <Footer />
-      </body>
+      <ReactLenis root>
+        <body
+          className={`${ibmPlexSans.className} min-h-screen max-w-screen bg-[#0f1010]`}
+        >
+          <Navbar />
+          {children}
+          <Toaster />
+          <Footer />
+        </body>
+      </ReactLenis>
     </html>
   );
 }
