@@ -1,6 +1,5 @@
 import Hero from "@/components/global/hero";
 import Work from "@/components/global/work";
-import Footer from "@/components/global/footer";
 import ContactCta from "@/components/global/contact-cta";
 
 export default function Home() {
@@ -9,7 +8,6 @@ export default function Home() {
       <Hero />
       <Work />
       <ContactCta />
-      <Footer />
     </section>
   );
 }

@@ -37,8 +37,8 @@ const AboutTools = () => {
         <motion.div className="flex items-center gap-2" variants={itemVariants}>
           <p className="text-neutral-500 text-sm text-pretty font-[200] mb-6 tracking-tight lg:text-lg">
             <span className="font-[600] font-bold">UI: </span>
-            CSS / CSSModules / Bootstrap / TailwindCSS / FramerMotion / Framer /
-            shadcn / NextUI / Chart.JS / Aceternity
+            CSS / CSSModules / Bootstrap / TailwindCSS / FramerMotion / shadcn /
+            NextUI / Chart.JS / Aceternity
           </p>
         </motion.div>
         <motion.div className="flex items-center gap-2" variants={itemVariants}>
