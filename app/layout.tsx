@@ -27,10 +27,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Mateusz Nadolny | Fullstack Web Developer</title>
+        <title>
+          Custom websites - Custom Solutions for Your Business Needs
+        </title>
         <meta
           name="description"
-          content="Creating websites that turn visitors into customers. Custom websites, custom design, custom development."
+          content="Creating websites that turn visitors into customers. Custom websites, custom design, custom development. | Mateusz Nadolny | Fullstack Web Developer"
         />
         <GoogleAnalytics gaId="G-63FF8KCRGJ" />
       </head>
