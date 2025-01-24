@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { DM_Serif_Text, Noto_Sans, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 
-import PlausibleProvider from "next-plausible";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { ReactLenis } from "@/components/providers/lenis-provider";
 import { Toaster } from "@/components/ui/toaster";
 import Navbar from "@/components/global/navbar";
@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <PlausibleProvider domain="mnadolny.com" />
+        <GoogleAnalytics gaId="G-63FF8KCRGJ" />
       </head>
       <ReactLenis root>
         <body
