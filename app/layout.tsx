@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { DM_Serif_Text, Noto_Sans, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 
@@ -20,12 +19,6 @@ const ibmPlexSans = IBM_Plex_Sans({
   weight: ["100", "200", "400", "600", "700"],
 });
 
-export const metadata: Metadata = {
-  title: "Mateusz Nadolny | Fullstack Web Developer",
-  description:
-    "Custom Websites That Turn Visitors Into Customers—Designed Just for You",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,6 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <title>Mateusz Nadolny | Fullstack Web Developer</title>
+        <meta
+          name="description"
+          content="Creating websites that turn visitors into customers. Custom websites, custom design, custom development."
+        />
         <GoogleAnalytics gaId="G-63FF8KCRGJ" />
       </head>
       <ReactLenis root>
