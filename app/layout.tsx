@@ -45,7 +45,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           property="og:title"
-          content="Websites for business - Custom Solutions for Your Business Needs | Mateusz Nadolny"
+          content="Websites for Business - Custom Solutions for Your Business Needs | Mateusz Nadolny"
         />
         <meta
           property="og:description"
@@ -70,7 +70,7 @@ export default function RootLayout({
           content="https://raw.githubusercontent.com/mateuszNadolny/portfolio/refs/heads/main/public/mnadolny.png"
         />
         <meta name="twitter:creator" content="@codeslav" />
-        <link rel="canonical" href="https://mnadolny.com" />{" "}
+        <link rel="canonical" href="https://mnadolny.com" />
         <GoogleAnalytics gaId="G-63FF8KCRGJ" />
       </head>
       <ReactLenis root>
@@ -84,26 +84,6 @@ export default function RootLayout({
           <Toaster />
         </body>
       </ReactLenis>
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Person",
-          name: "Mateusz Nadolny",
-          jobTitle: "Freelance Web Developer & Designer",
-          url: "https://mnadolny.com",
-          sameAs: [
-            "https://www.linkedin.com/in/mateusz-nadolny-web-dev/",
-            "https://github.com/mateuszNadolny",
-            "https://twitter.com/codeslav",
-          ],
-          worksFor: {
-            "@type": "Organization",
-            name: "Self-Employed",
-          },
-          description:
-            "Experienced freelance web developer specializing in custom, responsive website design and development to help businesses grow.",
-        })}
-      </script>
     </html>
   );
 }

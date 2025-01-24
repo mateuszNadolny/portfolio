@@ -7,29 +7,31 @@ export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {}
 
 const ContactInput = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className, type, ...props }, ref) => {
+  ({ className, type, ...props }, forwardedRef) => {
     const radius = 100; // change this to increase the rdaius of the hover effect
     const [visible, setVisible] = React.useState(false);
 
-    let mouseX = useMotionValue(0);
-    let mouseY = useMotionValue(0);
+    const mouseX = useMotionValue(0);
+    const mouseY = useMotionValue(0);
 
     function handleMouseMove({ currentTarget, clientX, clientY }: any) {
-      let { left, top } = currentTarget.getBoundingClientRect();
-
+      const { left, top } = currentTarget.getBoundingClientRect();
       mouseX.set(clientX - left);
       mouseY.set(clientY - top);
     }
+
     return (
       <motion.div
         style={{
           background: useMotionTemplate`
-        radial-gradient(
-          ${visible ? radius + "px" : "0px"} circle at ${mouseX}px ${mouseY}px,
-          var(--green-900),
-          transparent 90%
-        )
-      `,
+          radial-gradient(
+            ${
+              visible ? radius + "px" : "0px"
+            } circle at ${mouseX}px ${mouseY}px,
+            var(--green-900),
+            transparent 90%
+          )
+        `,
         }}
         onMouseMove={handleMouseMove}
         onMouseEnter={() => setVisible(true)}
@@ -37,6 +39,7 @@ const ContactInput = React.forwardRef<HTMLInputElement, InputProps>(
         className="p-[5px] rounded-xl transition duration-300 group/input"
       >
         <input
+          ref={forwardedRef}
           type={type}
           className={cn(
             `flex h-10 w-full border-none bg-neutral-800 shadow-input rounded-xl px-3 py-2 text-sm text-neutral-200 file:border-0 file:bg-transparent 
@@ -48,7 +51,6 @@ const ContactInput = React.forwardRef<HTMLInputElement, InputProps>(
            `,
             className
           )}
-          ref={ref}
           {...props}
         />
       </motion.div>
