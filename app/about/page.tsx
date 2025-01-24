@@ -1,7 +1,11 @@
 import AboutWrapper from "@/components/global/about-wrapper";
 
 const AboutPage = () => {
-  return <AboutWrapper />;
+  return (
+    <main className="min-h-screen">
+      <AboutWrapper />
+    </main>
+  );
 };
 
 export default AboutPage;

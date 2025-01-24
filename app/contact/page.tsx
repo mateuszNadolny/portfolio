@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 
 const ContactPage = () => {
   return (
-    <div className="flex-1 w-full flex flex-col items-center justify-center relative pt-16 md:pt-24">
+    <main className="flex-1 w-full flex flex-col items-center justify-center min-h-screen relative pt-16 md:pt-24">
       <ContactSection />
-    </div>
+    </main>
   );
 };
 
