@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { scrollToSection } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (

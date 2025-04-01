@@ -2,10 +2,8 @@
 import { useState } from "react";
 import Link from "next/link";
 
-import { IoMdMail } from "react-icons/io";
 import { SiLinkedin } from "react-icons/si";
 import { FaGithub, FaSquareXTwitter } from "react-icons/fa6";
-import { Copy, ClipboardCheck } from "lucide-react";
 
 interface ContactIconProps {
   title: string;

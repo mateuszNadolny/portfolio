@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import { containerVariants, itemVariants } from "@/constants/framer-variants";
 import { motion } from "framer-motion";
 import { blurhashToBase64 } from "blurhash-base64";
-import { containerVariants, itemVariants } from "@/constants/framer-variants";
 const AboutImageGrid = () => {
   return (
     <motion.div

@@ -31,8 +31,8 @@ const WorkCard = ({
     offset: ["0 .9", "1.1 1"],
   });
 
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
-  const scale = useSpring(scaleProgress, { stiffness: 90, damping: 10 });
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.99, 1]);
+  const scale = useSpring(scaleProgress, { stiffness: 10, damping: 20 });
   const opacity = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
   const rotateX = useTransform(scrollYProgress, [0, 1], [40, 1]);
   // const y = useTransform(scrollYProgress, [0, 1], [10, 0]);

@@ -1,4 +1,3 @@
-import AboutImageGrid from "@/components/global/about-image-grid";
 import AboutTextSection from "@/components/global/about-text-section";
 import AboutExperience from "@/components/global/about-experience";
 import AboutTools from "./about-tools";
