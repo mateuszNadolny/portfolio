@@ -6,6 +6,7 @@ import { ReactLenis } from "@/components/providers/lenis-provider";
 import { Toaster } from "@/components/ui/toaster";
 import Navbar from "@/components/global/navbar";
 import Footer from "@/components/global/footer";
+import { DockNavbar } from "@/components/global/dock-navbar";
 const dmSerifText = DM_Serif_Text({
   subsets: ["latin"],
   weight: "400",
@@ -29,8 +30,8 @@ export default function RootLayout({
       <head>
         <meta name="language" content="en" />
         <title>
-          Websites for business - Custom Solutions for Your Business Needs |
-          Mateusz Nadolny
+          Mateusz Nadolny - Websites for business - Custom Solutions for Your
+          Business Needs | Web Developer - Web Designer
         </title>
         <meta
           name="description"
@@ -77,10 +78,10 @@ export default function RootLayout({
         <body
           className={`${ibmPlexSans.className} min-h-screen max-w-screen bg-[#0f1010]`}
         >
+          <DockNavbar />
           <Navbar />
           {children}
           <Footer />
-
           <Toaster />
         </body>
       </ReactLenis>
