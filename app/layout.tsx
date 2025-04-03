@@ -2,6 +2,7 @@ import { DM_Serif_Text, Noto_Sans, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/react";
 import { ReactLenis } from "@/components/providers/lenis-provider";
 import { Toaster } from "@/components/ui/toaster";
 import Navbar from "@/components/global/navbar";
@@ -73,6 +74,7 @@ export default function RootLayout({
         <meta name="twitter:creator" content="@codeslav" />
         <link rel="canonical" href="https://mnadolny.com" />
         <GoogleAnalytics gaId="G-63FF8KCRGJ" />
+        <Analytics />
       </head>
       <ReactLenis root>
         <body
