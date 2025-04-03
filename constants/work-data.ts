@@ -1,26 +1,34 @@
 export const WORK_DATA = [
   {
     id: "01",
+    title: "Geodesy Specialist Website",
+    description: "Personal Website for Geodesy Specialist.",
+    image: "/geodesy.webp",
+    technologies: ["Next.js", "Tailwind CSS", "Shadcn/UI", "Framer Motion"],
+    url: "https://mnadolny.com/",
+  },
+  {
+    id: "02",
     title: "Nordhaven",
     description: "Business Landing Page for Nordhaven Construction Company.",
-    image: "/nordhaven.png",
+    image: "/nordhaven.webp",
     technologies: ["Next.js", "Tailwind CSS", "Shadcn/UI", "Framer Motion"],
     url: "https://nordhaven-constructions.vercel.app/",
   },
   {
-    id: "02",
+    id: "03",
     title: "Form Speedrunner",
     description:
       "Interactive web game that challenges players to complete form submissions as quickly as possible while maintaining accuracy.",
-    image: "/speedrunner.png",
+    image: "/speedrunner.webp",
     technologies: ["Next.js", "Tailwind CSS", "Shadcn/UI", "Framer Motion"],
     url: "https://form-speedrunner.com/",
   },
   {
-    id: "03",
+    id: "04",
     title: "Selfspace",
     description: "A place where you can meditate, breathe, focus and relax.",
-    image: "/selfspace.png",
+    image: "/selfspace.webp",
     technologies: [
       "Next.js",
       "Tailwind CSS",
@@ -34,10 +42,10 @@ export const WORK_DATA = [
     url: "https://selfspace.vercel.app/",
   },
   {
-    id: "04",
+    id: "05",
     title: "Chatter",
     description: "Fullstack, realtime chat app.",
-    image: "/chatter.png",
+    image: "/chatter.webp",
     technologies: [
       "Next.js",
       "Tailwind CSS",

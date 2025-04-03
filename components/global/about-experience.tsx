@@ -24,7 +24,7 @@ const AboutExperience = () => {
         </motion.h3>
         <motion.div variants={itemVariants} className="flex items-center gap-4">
           <Image
-            src="/cheil.png"
+            src="/cheil.webp"
             alt="Cheil logo"
             width={50}
             height={50}
@@ -41,7 +41,7 @@ const AboutExperience = () => {
         />
         <motion.div variants={itemVariants} className="flex items-center gap-4">
           <Image
-            src="/cheil.png"
+            src="/cheil.webp"
             alt="Cheil logo"
             width={50}
             height={50}

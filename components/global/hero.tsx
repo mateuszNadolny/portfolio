@@ -116,7 +116,7 @@ const Hero = () => {
         }}
       >
         <Image
-          src="/hero2.png"
+          src="/hero2.webp"
           alt="Hero Image"
           width={500}
           height={500}
@@ -165,7 +165,7 @@ const Hero = () => {
         }}
       >
         <Image
-          src="/hero2.png"
+          src="/hero2.webp"
           alt="Hero Image"
           width={500}
           height={500}
@@ -215,7 +215,7 @@ const Hero = () => {
         }}
       >
         <Image
-          src="/hero2.png"
+          src="/hero2.webp"
           alt="Hero Image"
           width={500}
           height={500}
