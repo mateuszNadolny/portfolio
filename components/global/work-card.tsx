@@ -1,9 +1,12 @@
 "use client";
 
 import { useRef } from "react";
+import { useViewportSize } from "@/hooks/useViewportSize";
 
 import Image from "next/image";
 import Link from "next/link";
+import { CldVideoPlayer } from "next-cloudinary";
+import "next-cloudinary/dist/cld-video-player.css";
 import { blurhashToBase64 } from "blurhash-base64";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
@@ -12,6 +15,7 @@ interface WorkCardProps {
   title: string;
   description: string;
   image: string;
+  video: string;
   technologies: string[];
   url: string;
 }
@@ -21,10 +25,12 @@ const WorkCard = ({
   title,
   description,
   image,
+  video,
   technologies,
   url,
 }: WorkCardProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const { isMobile } = useViewportSize();
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -67,23 +73,31 @@ const WorkCard = ({
               {description}
             </p>
           </div>
-          <div className="block lg:hidden mt-8 rounded-xl border-[13px] bg-neutral-800 border-neutral-800 ring-2 ring-neutral-400/20">
-            <Image
-              src={image}
-              alt={title}
-              width={500}
-              height={500}
-              placeholder="blur"
-              blurDataURL={blurhashToBase64("LBA2TBcH4Txb00%$_MxZ?FibEQXT")}
-              className=" rounded-[10px] md:object-contain lg:object-cover"
-            />
-          </div>
-          <div className="hidden lg:block rounded-xl border-[13px] bg-neutral-800 border-neutral-800 ring-2 ring-neutral-400/20 md:w-[200px] md:h-[200px] lg:absolute lg:right-[-15rem] lg:bottom-[-4rem] lg:w-[70%] lg:h-[500px] ">
-            <Image
-              src={image}
-              alt={title}
-              fill
-              className=" rounded-[10px] md:object-contain lg:object-cover"
+          <div
+            className={`
+              rounded-xl border-[13px] bg-neutral-800 border-neutral-800 ring-2 ring-neutral-400/20
+              ${
+                isMobile
+                  ? "w-full mt-8"
+                  : "hidden lg:block md:w-[200px] md:h-[200px] lg:absolute lg:right-[-15rem] lg:bottom-[-4rem] lg:w-[70%] lg:h-[500px]"
+              }
+            `}
+          >
+            <CldVideoPlayer
+              src={video}
+              width="100%"
+              height={isMobile ? "auto" : "100%"}
+              aspectRatio="16:9"
+              autoplay={true}
+              fluid={true}
+              muted={true}
+              loop={true}
+              controls={false}
+              playsinline={true}
+              className={`
+                rounded-[10px] object-cover
+                ${isMobile ? "w-full h-auto" : "w-full h-full"}
+              `}
             />
           </div>
         </div>

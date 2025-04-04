@@ -33,7 +33,7 @@ const ContactCta = () => {
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
       variants={containerVariants}
-      className="flex relative flex-col justify-center items-center gap-4 px-4 h-[20rem] md:h-[70vh] my-16"
+      className="flex relative flex-col justify-center items-center gap-4 px-6 h-[20rem] md:h-[70vh] my-16"
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
       <motion.div
@@ -51,7 +51,7 @@ const ContactCta = () => {
 
       <motion.h2
         variants={itemVariants}
-        className="max-w-6xl bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-200 to-neutral-400 text-2xl sm:text-5xl font-serif font-[900] leading-relaxed"
+        className="max-w-6xl bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-200 to-neutral-400 text-xl sm:text-5xl font-serif font-[900] leading-relaxed"
       >
         Ready to Elevate Your Online Presence or Expand Your Team?
       </motion.h2>
