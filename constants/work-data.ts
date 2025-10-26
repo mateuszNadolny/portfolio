@@ -6,7 +6,7 @@ export const WORK_DATA = [
     image: "/geodesy.webp",
     video: "dja8hhncnairygm6ujeh",
     technologies: ["Next.js", "Tailwind CSS", "Shadcn/UI", "Framer Motion"],
-    url: "https://mnadolny.com/",
+    url: "https://geodezja-theta.vercel.app/",
   },
   {
     id: "02",
