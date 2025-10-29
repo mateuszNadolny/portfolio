@@ -31,8 +31,8 @@ export default function RootLayout({
       <head>
         <meta name="language" content="en" />
         <title>
-          Mateusz Nadolny - Websites for business - Custom Solutions for Your
-          Business Needs | Web Developer - Web Designer
+          Web Developer & Designer – Custom WordPress & Business Websites |
+          Mateusz Nadolny
         </title>
         <meta
           name="description"
@@ -51,7 +51,7 @@ export default function RootLayout({
         />
         <meta
           property="og:description"
-          content="Experienced freelance web developer and designer specializing in modern, responsive websites and tailored solutions to grow your business."
+          content="Freelance web developer & designer building modern, responsive websites for growing businesses. Available for remote or contract work — let’s build your next project!"
         />
         <meta
           property="og:image"
